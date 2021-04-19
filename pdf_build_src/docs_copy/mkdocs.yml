@@ -1,0 +1,67 @@
+site_name: edf2bids v3.1
+site_author: Greydon Gilmore
+
+# Repository
+repo_name: GitHub
+repo_url: https://github.com/greydongilmore/edf2bids-site
+edit_uri: https://github.com/greydongilmore/edf2bids-site/blob/master/docs
+
+# Copyright
+copyright: Copyright &copy; 2020 Greydon Gilmore
+
+# Configuration
+dev_addr: 127.0.0.1:7000
+use_directory_urls: false
+theme:
+  name: material
+  custom_dir: material
+  palette:
+    scheme: 
+    primary: red
+    accent: red
+  logo: img/edf2bids_white_icon.svg
+  favicon: img/edf2bids_icon.svg
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.arithmatex
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+  
+# Plugins
+plugins:
+  - search
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Getting Started:
+    - Overview: getting_started/01_overview.md
+    - Definitions: getting_started/02_definitions.md
+    - Export from Natus: getting_started/03_natus_export.md
+    - Input Directory Setup: getting_started/04_input_dir_setup.md
+    - Check EDF Type: getting_started/05_check_edf_type.md
+    - edf2bids Settings: getting_started/06_edf2bids_settings.md
+    - Run Conversion: getting_started/07_run_conversion.md
+    - Output Directory Structure: getting_started/08_output_structure.md
+    - SPReD Upload [EpLink]: getting_started/09_spred_upload.md

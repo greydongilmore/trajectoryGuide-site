@@ -1,0 +1,150 @@
+[
+  {
+    "text": "working_dir",
+    "icon": "fa fa-folder",
+    "nodes": [
+      {
+        "text": "input",
+        "icon": "fa fa-folder",
+        "nodes": [
+           {
+              "text": "EPL31_LHS_0001",
+              "icon": "fa fa-folder",
+              "nodes": [
+                {
+                  "text": "imaging",
+                  "icon": "fa fa-folder",
+                  "nodes": [
+                    {
+                      "text": "EPL31_LHS_0001_01_SE01",
+                      "icon": "fa fa-folder",
+                      "nodes": [
+                        {
+                          "text": "T1w_scan",
+                          "icon": "fa fa-folder",
+                          "nodes": [
+                            {
+                              "text": "IM-0009-0001.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "IM-0009-0002.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "IM-0009-0003.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "IM-0009-0004.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "...",
+                              "icon": "fa fa-file"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "T2w_scan",
+                          "icon": "fa fa-folder",
+                          "nodes": [
+                            {
+                              "text": "IM-0002-0001.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "IM-0002-0002.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "IM-0002-0003.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "IM-0002-0004.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "...",
+                              "icon": "fa fa-file"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "dwi",
+                          "icon": "fa fa-folder",
+                          "nodes": [
+                            {
+                              "text": "IM-0004-0001.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "IM-0004-0002.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "IM-0004-0003.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "IM-0004-0004.dcm",
+                              "icon": "fa fa-file"
+                            },
+                            {
+                              "text": "...",
+                              "icon": "fa fa-file"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "text": "EPL31_LHS_0001_01_SE01_EEG_CLIP_RET",
+                  "icon": "fa fa-folder",
+                  "nodes": [
+                    {
+                      "text": "X~ X_74d0e60d-69ac-4185-ad85-d07c262861bc day 1.EDF",
+                      "icon": "fa fa-file"
+                    }
+                  ]
+                },
+                {
+                  "text": "EPL31_LHS_0001_01_SE02_EEG_CLIP_RET",
+                  "icon": "fa fa-folder",
+                  "nodes": [
+                    {
+                      "text": "X~ X_8d0662d0-5e1c-4c76-8998-480c0384d69a day 2.EDF",
+                      "icon": "fa fa-file"
+                    }
+                  ]
+                },
+                {
+                  "text": "EPL31_LHS_0001_01_SE03_EEG_CLIP_RET",
+                  "icon": "fa fa-folder",
+                  "nodes": [
+                    {
+                      "text": "X~ X_c8608024-20e2-481a-9e9b-442f27de2db9 day 3.EDF",
+                      "icon": "fa fa-file"
+                    }
+                  ]
+                },
+                {
+                  "text": "EPL31_LHS_0001_02_SE01_EEG_CLIP",
+                  "icon": "fa fa-folder",
+                  "nodes": [
+                    {
+                      "text": "X~ X_fc18e89c-1411-48c2-b652-7b82cec42aa3 day 4.EDF",
+                      "icon": "fa fa-file"
+                    }
+                  ]
+                }
+              ]
+            }
+        ]
+      }
+    ]
+  }
+]

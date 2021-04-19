@@ -1,0 +1,194 @@
+[
+  {
+    "text": "working_dir",
+    "icon": "fa fa-folder",
+    "nodes": [
+      {
+        "text": "input",
+        "icon": "fa fa-folder",
+        "nodes": [
+         {
+            "text": "EPL31_LHS_0001",
+            "icon": "fa fa-folder",
+            "nodes": [
+              {
+                "text": "imaging",
+                "icon": "fa fa-folder",
+                "nodes": [
+                  {
+                  "text": "EPL31_LHS_0001_01",
+                  "icon": "fa fa-folder",
+                  "nodes": [
+                      {
+                        "text": "T1w_scan",
+                        "icon": "fa fa-folder",
+                        "nodes": [
+                          {
+                            "text": "IM-0009-0001.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0009-0002.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0009-0003.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0009-0004.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "...",
+                            "icon": "fa fa-file"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "T2w_scan",
+                        "icon": "fa fa-folder",
+                        "nodes": [
+                          {
+                            "text": "IM-0002-0001.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0002-0002.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0002-0003.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0002-0004.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "...",
+                            "icon": "fa fa-file"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "dwi",
+                        "icon": "fa fa-folder",
+                        "nodes": [
+                          {
+                            "text": "IM-0004-0001.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0004-0002.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0004-0003.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0004-0004.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "...",
+                            "icon": "fa fa-file"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                  "text": "EPL31_LHS_0001_02",
+                  "icon": "fa fa-folder",
+                  "nodes": [
+                      {
+                        "text": "T1w_scan_compressed.tar.gz",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "T2w_scan_compressed.tar.gz",
+                        "icon": "fa fa-file"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "EPL31_LHS_0002",
+            "icon": "fa fa-folder",
+            "nodes": [
+              {
+                "text": "imaging",
+                "icon": "fa fa-folder",
+                "nodes": [
+                  {
+                    "text": "EPL31_LHS_0002_01",
+                    "icon": "fa fa-folder",
+                    "nodes": [
+                      {
+                        "text": "T1w_scan",
+                        "icon": "fa fa-folder",
+                        "nodes": [
+                          {
+                            "text": "IM-0009-0001.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0009-0002.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0009-0003.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0009-0004.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "...",
+                            "icon": "fa fa-file"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "dwi",
+                        "icon": "fa fa-folder",
+                        "nodes": [
+                          {
+                            "text": "IM-0004-0001.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0004-0002.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0004-0003.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "IM-0004-0004.dcm",
+                            "icon": "fa fa-file"
+                          },
+                          {
+                            "text": "...",
+                            "icon": "fa fa-file"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

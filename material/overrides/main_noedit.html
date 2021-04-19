@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% block source %}
+    {% if page and page.meta and page.meta.source %}
+      {% include "partials/source-link.html" %}
+    {% endif %}
+  {% endblock %}
+  {{ page.content }}
+  {% if page and page.meta %}
+    {% if page.meta.git_revision_date_localized or
+          page.meta.revision_date
+    %}
+      {% include "partials/source-date.html" %}
+    {% endif %}
+  {% endif %}
+{% endblock %}
+
+{% block footer %}
+  {% include "overrides/footer.html" %}
+{% endblock %}

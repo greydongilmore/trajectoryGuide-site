@@ -1,0 +1,63 @@
+site_name: trajectoryGuide v1.0
+site_author: Greydon Gilmore
+
+# Repository
+repo_name: GitHub
+repo_url: https://github.com/trajectoryGuide/trajectoryGuide-site
+edit_uri: https://github.com/trajectoryGuide/trajectoryGuide-site/blob/master/docs
+
+# Copyright
+copyright: Copyright &copy; 2021 Greydon Gilmore
+
+# Configuration
+dev_addr: 127.0.0.1:7000
+use_directory_urls: false
+theme:
+  name: material
+  custom_dir: material
+  palette:
+    scheme: 
+    primary: red
+    accent: red
+  logo: img/trajectoryGuide.png
+  favicon: img/trajectoryGuide_icon.svg
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.arithmatex
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+  
+# Plugins
+plugins:
+  - search
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Modules:
+    - Overview: widgets/00_overview.md
+    - Patient Directory: widgets/01_patient_directory.md
+    - Frame Detection: widgets/04_frame_detection.md
+    - Registration: widgets/05_registration.md
+  - About: about.md

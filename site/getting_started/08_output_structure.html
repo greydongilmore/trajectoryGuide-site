@@ -1,0 +1,965 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Greydon Gilmore">
+      
+      <link rel="shortcut icon" href="../img/edf2bids_icon.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+    
+    
+      
+        <title>Output directory structure</title>
+      
+    
+    
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/bstreeview.min.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.545621a7.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.36d1b78f.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+
+    
+    
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7e31cfd31d.js" crossorigin="anonymous"></script>
+    <script src="../js/bstreeview.min.js"></script>
+
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="none" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bids-directory-structure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="data2bids v3.1" class="md-header-nav__button md-logo" aria-label="data2bids v3.1">
+      
+  <img src="../img/edf2bids_white_icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            data2bids v3.1
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Output directory structure
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/greydongilmore/data2bids-site/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="data2bids v3.1" class="md-nav__button md-logo" aria-label="data2bids v3.1">
+      
+  <img src="../img/edf2bids_white_icon.svg" alt="logo">
+
+    </a>
+    data2bids v3.1
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/greydongilmore/data2bids-site/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../installation.html" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Getting Started
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="01_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02_definitions.html" title="Definitions" class="md-nav__link">
+      Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="03_edf2bids_settings.html" title="data2bids Settings" class="md-nav__link">
+      data2bids Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="04_neuroworks_export.html" title="Export from NeuroWorks" class="md-nav__link">
+      Export from NeuroWorks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="05_input_dir_setup.html" title="Input Directory Setup" class="md-nav__link">
+      Input Directory Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="055_imaging_dir_setup.html" title="Imaging Directory Setup" class="md-nav__link">
+      Imaging Directory Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="06_check_edf_type.html" title="Check EDF Type" class="md-nav__link">
+      Check EDF Type
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="07_run_conversion.html" title="Run Conversion" class="md-nav__link">
+      Run Conversion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Output Directory Structure
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="08_output_structure.html" title="Output Directory Structure" class="md-nav__link md-nav__link--active">
+      Output Directory Structure
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bids-directory-structure" class="md-nav__link">
+    BIDS directory structure
+  </a>
+  
+    <nav class="md-nav" aria-label="BIDS directory structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#electrodes-vs-channels" class="md-nav__link">
+    Electrodes vs. channels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subject-directory" class="md-nav__link">
+    Subject directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Subject directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_scanstsv" class="md-nav__link">
+    *_scans.tsv
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-directory" class="md-nav__link">
+    Session directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Session directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_electrodestsv" class="md-nav__link">
+    *_electrodes.tsv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_channelstsv" class="md-nav__link">
+    *_channels.tsv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_annotationstsv" class="md-nav__link">
+    *_annotations.tsv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_eegjson-or-_ieegjson" class="md-nav__link">
+    *_eeg.json or *_ieeg.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_eegedf-or-_ieegedf" class="md-nav__link">
+    *_eeg.edf or *_ieeg.edf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-structure" class="md-nav__link">
+    Example Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive" class="md-nav__link">
+    Interactive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spred-directory-structure" class="md-nav__link">
+    SPReD directory structure
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="09_spred_upload.html" title="SPReD Upload [EpLink]" class="md-nav__link">
+      SPReD Upload [EpLink]
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bids-directory-structure" class="md-nav__link">
+    BIDS directory structure
+  </a>
+  
+    <nav class="md-nav" aria-label="BIDS directory structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#electrodes-vs-channels" class="md-nav__link">
+    Electrodes vs. channels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subject-directory" class="md-nav__link">
+    Subject directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Subject directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_scanstsv" class="md-nav__link">
+    *_scans.tsv
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-directory" class="md-nav__link">
+    Session directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Session directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_electrodestsv" class="md-nav__link">
+    *_electrodes.tsv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_channelstsv" class="md-nav__link">
+    *_channels.tsv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_annotationstsv" class="md-nav__link">
+    *_annotations.tsv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_eegjson-or-_ieegjson" class="md-nav__link">
+    *_eeg.json or *_ieeg.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_eegedf-or-_ieegedf" class="md-nav__link">
+    *_eeg.edf or *_ieeg.edf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-structure" class="md-nav__link">
+    Example Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive" class="md-nav__link">
+    Interactive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spred-directory-structure" class="md-nav__link">
+    SPReD directory structure
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+  
+    <a href="https://github.com/greydongilmore/data2bids-site/blob/master/docs/getting_started/08_output_structure.md" title="Edit this page" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg> <p style="margin-top:2px;">Edit this page</p>
+    </a>
+    <a href="https://github.com/greydongilmore/edf2bids-site/issues/new/choose" title="Open an issue" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> <p style="margin-top:2px;">Open and issue</p>
+    </a>
+  
+  
+    
+  
+  
+    <h1>Output Directory Structure</h1>
+  
+  <h2 id="bids-directory-structure">BIDS directory structure<a class="headerlink" href="#bids-directory-structure" title="Permanent link">&para;</a></h2>
+<p>The output directory will look like the following (each subject having their own directory):</p>
+<p><center><img src="../img/dir_structure_01.png" alt="drawing" width="30%"/></center></p>
+<ul>
+<li><strong>code:</strong> this directory will contain the code used to convert the EDF/EDF+ data for each EDF/EDF+ file for the subjects.</li>
+<li><strong>dataset_description.json:</strong> this file will contain the Json Metadata previously defined in the <strong>Settings</strong> menu. This is overall information about the dataset</li>
+<li><strong>participants.tsv:</strong> this file contains a list of all the subjects in the dataset and their general demographics (i.e. age, sex etc.). This file can also be used to store additional subject information that is not variable over the different visits and sessions. </li>
+</ul>
+<h3 id="electrodes-vs-channels">Electrodes vs. channels<a class="headerlink" href="#electrodes-vs-channels" title="Permanent link">&para;</a></h3>
+<p>It is important to understand the difference between the terms <code>electrode</code> and <code>channel</code>. An iEEG electrode is placed on or in the brain, whereas a channel is the combination of the analog differential amplifier and analog-to-digital converter that result in a potential (voltage) difference that is stored in the EEG/iEEG dataset.</p>
+<ul>
+<li><strong>Electrode:</strong> a single point of contact between the acquisition system and the recording site. Multiple electrodes can be organized as arrays, grids, leads, strips, probes, shafts, caps (for EEG) etc.</li>
+<li><strong>Channel:</strong> a single analog-to-digital converter in the recording system that regularly samples the value of a transducer, which results in the signal being represented as a time series in the digitized data. This can be connected to two electrodes (to measure the potential difference between them), a magnetic field or magnetic gradient sensor, temperature sensor, accelerometer etc.</li>
+</ul>
+<h3 id="subject-directory">Subject directory<a class="headerlink" href="#subject-directory" title="Permanent link">&para;</a></h3>
+<p>Within each subject directory there will be a different session sub-directory for each day of recording.</p>
+<p><center><img src="../img/sub_dir_structure_01.png" alt="drawing" width="40%"/></center></p>
+<h4 id="_scanstsv">*_scans.tsv<a class="headerlink" href="#_scanstsv" title="Permanent link">&para;</a></h4>
+<p>The <code>*_scans.tsv</code> file contains general information about each EDF file for the subject (i.e. filename, recording duration, EDF+ type etc.).</p>
+<p><center></p>
+<figure>
+  <img src="../img/scans_tsv.png" alt="drawing" />
+  <figcaption>Example content of the <b>*_scans.tsv</b> file.</figcaption>
+</figure>
+<p></center></p>
+<ul>
+<li><strong>filename:</strong> relative filename for each EDF/EDF+ file.</li>
+<li><strong>acq_time:</strong> the date and time the recording was started in the format YYYY-MM-DDTHH:MM:SS (note: the <code>T</code> is used to separate the date from time)</li>
+<li><strong>duration:</strong> the total duration of the EDF/EDF+ file in decimal hours</li>
+<li><strong>edf_type:</strong> indicates the EDF type for the file, either continuous (EDF+C) or discontinuous (EDF+D) </li>
+</ul>
+<h3 id="session-directory">Session directory<a class="headerlink" href="#session-directory" title="Permanent link">&para;</a></h3>
+<p>Within each session sub-directory there will be a modality sub-directory (either eeg/ieeg). Within the modality sub-directory there will be five files, containing different information associated with the specific EDF/EDF+ file.</p>
+<p><center><img src="../img/ses_dir_structure_01.png" alt="drawing" width="50%"/></center></p>
+<h4 id="_electrodestsv">*_electrodes.tsv<a class="headerlink" href="#_electrodestsv" title="Permanent link">&para;</a></h4>
+<p>The <code>*_electrodes.tsv</code> file contains information associated with the electrodes used to collect the data.</p>
+<p><center></p>
+<figure>
+  <img src="../img/electrodes_file.png" alt="drawing" width="80%"/>
+  <figcaption>Example content of the <b>*_electrodes.tsv</b> file.</figcaption>
+</figure>
+<p></center></p>
+<ul>
+<li><strong>name:</strong> label given to the specific channel during the recording.</li>
+<li><strong>x,y,z:</strong> the coordinates in MRI space for the specific electrode contact.</li>
+<li><strong>size:</strong> the diameter of the recording electrode in millimeters</li>
+<li><strong>type:</strong> the electrode type (i.e. depth, scalp etc.)</li>
+<li><strong>material:</strong> the electrode material.</li>
+<li><strong>manufacturer:</strong> the manufacturer of the electrode.</li>
+</ul>
+<h4 id="_channelstsv">*_channels.tsv<a class="headerlink" href="#_channelstsv" title="Permanent link">&para;</a></h4>
+<p>The <code>*_channels.tsv</code> file contains information about each channel that was used in the recording.</p>
+<p><center></p>
+<figure>
+  <img src="../img/channels_file.png" alt="drawing" width="80%"/>
+  <figcaption>Example content of the <b>*_channels.tsv</b> file.</figcaption>
+</figure>
+<p></center></p>
+<ul>
+<li><strong>name:</strong> label of the specific channel.</li>
+<li><strong>type:</strong> type of channel (i.e. SEEG,EEG, DBS, EOG, ECG etc.)</li>
+<li><strong>units:</strong> physical unit of the value represented in this channel (i.e. <code>V</code> for Volt)</li>
+<li><strong>low_cutoff:</strong> frequency used for the low pass filter applied to the channel in Hz (note: if no low pass filter was applied, <code>n/a</code> is used).</li>
+<li><strong>high_cutoff:</strong> frequency used for the high pass filter applied to the channel in Hz (note: if no high pass filter was applied, <code>n/a</code> is used).</li>
+<li><strong>sampling_frequency:</strong> sampling rate of the channel in Hz.</li>
+<li><strong>notch:</strong> frequency used for the notch filter applied to the channel in Hz (note: if no notch filter was applied, <code>n/a</code> is used).</li>
+<li><strong>reference:</strong> label for the reference (i.e. 'mastoid', 'ElectrodeName01', 'intracranial' etc.). If the channel is not known then <code>n/a</code> is used.</li>
+<li><strong>group:</strong> which group of channels (grid/strip/seeg/depth) this channel belongs to. This is relevant because one group has one cable-bundle and noise can be shared.</li>
+</ul>
+<h4 id="_annotationstsv">*_annotations.tsv<a class="headerlink" href="#_annotationstsv" title="Permanent link">&para;</a></h4>
+<p>The <code>*_annotations.tsv</code> file contains all annotations present in the EDF+ file, identifiers have been scrubbed.</p>
+<p><center></p>
+<figure>
+  <img src="../img/annotations_file.png" alt="drawing" />
+  <figcaption>Example content of the <b>*_annotations.tsv</b> file.</figcaption>
+</figure>
+<p></center></p>
+<ul>
+<li><strong>onset:</strong> the time the event occurred, relative to the time the recording began.</li>
+<li><strong>duration:</strong> the duration of the marked event (-1 indicates no duration, which is default for all events).</li>
+<li><strong>time_abs:</strong> the absolute time for the event (real world time).</li>
+<li><strong>time_rel:</strong> the relative time for the event (time elapsed since the beginning of the recording).</li>
+<li><strong>event:</strong> the event marker text.</li>
+</ul>
+<h4 id="_eegjson-or-_ieegjson">*_eeg.json or *_ieeg.json<a class="headerlink" href="#_eegjson-or-_ieegjson" title="Permanent link">&para;</a></h4>
+<p>The <code>*_eeg.json/*_ieeg.json</code> file contains metadata information about the EDF/EDF+ file.</p>
+<p><center></p>
+<figure>
+  <img src="../img/json_sidecar_file.png" alt="drawing" width="50%" />
+  <figcaption>Example content of the <b>*_eeg.json</b> or <b>*_ieeg.json</b> file.</figcaption>
+</figure>
+<p></center></p>
+<ul>
+<li><strong>TaskName:</strong> name of the task, no two tasks should have the same name (i.e. <code>full</code> for a full 24hr recording, <code>clip</code> if the data has been clipped by the neurologist etc.)</li>
+<li><strong>InstitutionName:</strong> name of the institution in charge of the equipment that produced the composite instances.</li>
+<li><strong>InstitutionAddress:</strong> address of the institution in charge of the equipment that produced the composite instances.</li>
+<li><strong>Manufacturer:</strong> manufacturer of the amplifier system.</li>
+<li><strong>ManufacturersModelName:</strong> manufacturer's designation of the EEG/iEEG amplifier model.</li>
+<li><strong>SamplingFrequency:</strong> sampling frequency (in Hz) of all the EEG/iEEG channels in the recording</li>
+<li><strong>HardwareFilters:</strong> the frequencies of the temporal hardware filters applied, if none exist then <code>n/a</code> is used.</li>
+<li><strong>SoftwareFilters:</strong> the frequencies of the temporal software filters applied, if none exist then <code>n/a</code> is used.</li>
+<li><strong>*ChannelCount:</strong> number of the respective channels included in the recording (i.e. EEG, EOG, ECG, SEEG etc.)</li>
+<li><strong>PowerLineFrequency:</strong> frequency (in Hz) of the power grid where the EEG/iEEG recording was done (for example, 50 or 60).</li>
+<li><strong>RecordingDuration:</strong> length of the recording in decimal hours.</li>
+<li><strong>RecordingType:</strong> defines whether the recording is <code>continuous</code>, <code>discontinuous</code> or <code>epoched</code>, where <code>epoched</code> is limited to time windows about events of interest.</li>
+<li><strong>SubjectArtefactDescription:</strong> freeform description of the observed subject artifact and its possible cause (i.e. "door open", "nurse walked into room at 2 min", "seizure at 10 min").</li>
+<li><strong>iEEGPlacementScheme:</strong> freeform description of the placement of the EEG/iEEG electrodes.</li>
+<li><strong>iEEGElectrodeGroups:</strong> field to describe the way electrodes are grouped into strips, grids or depth probes.</li>
+<li><strong>iEEGReference:</strong> general description of the reference scheme used and (when applicable) of location of the reference electrode in the raw recordings (i.e. "left mastoid", "bipolar").</li>
+<li><strong>ElectrodeManufacturer:</strong> manufacturer for the electrodes used during the recording (i.e. AD-TECH, DIXI)</li>
+<li><strong>ElectricalStimulationParameters:</strong> free form description of stimulation parameters, such as frequency or shape.</li>
+</ul>
+<h4 id="_eegedf-or-_ieegedf">*_eeg.edf or *_ieeg.edf<a class="headerlink" href="#_eegedf-or-_ieegedf" title="Permanent link">&para;</a></h4>
+<p>The <code>*_eeg.edf/*_ieeg.edf</code> contains the raw electrophysiology data.</p>
+<h3 id="example-structure">Example Structure<a class="headerlink" href="#example-structure" title="Permanent link">&para;</a></h3>
+<h4 id="interactive">Interactive<a class="headerlink" href="#interactive" title="Permanent link">&para;</a></h4>
+<div id="tree"></div>
+<script>
+    $(document).ready(function() {
+      $.ajax({
+          url : "../../assets/bids_dir.json",
+          dataType: "text",
+          success : function (tree) {
+              $('#tree').bstreeview({ data: tree });
+          }
+      });
+});
+</script>
+
+<h2 id="spred-directory-structure">SPReD directory structure<a class="headerlink" href="#spred-directory-structure" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>When the SPReD conversion is completed a new sub-directory will be created in the output directory. All unused BIDS files will be transferred to the <strong>bids_old</strong> sub-directory, while all the SPReD files will be moved to the <strong>SPReD</strong> sub-directory.</p>
+<p><center><img src="../img/bids_spred_03.png" alt="drawing" width="40%"/></center></p>
+</li>
+<li>
+<p>Within each sub-directory of the <strong>.zip</strong> folders the same files from the BIDS output will be found:</p>
+<p><center><img src="../img/ses_dir_structure_01.png" alt="drawing" width="50%"/></center></p>
+</li>
+<li>
+<p>You will be uploading the <strong>.zip</strong> directories to Brain-CODE.</p>
+</li>
+</ol>
+<p><br>
+<br>
+<br></p>
+  
+    
+  
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+  <!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <div class="md-footer-nav">
+      <nav
+        class="md-footer-nav__inner md-grid"
+        aria-label="Footer"
+      >
+
+        <!-- Link to previous page -->
+        
+          <a
+            href="07_run_conversion.html"
+            title="Run Conversion"
+            class="md-footer-nav__link md-footer-nav__link--prev"
+            rel="prev"
+          >
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Run Conversion
+              </div>
+            </div>
+          </a>
+        
+
+        <!-- Link to next page -->
+        
+          <a
+            href="09_spred_upload.html"
+            title="SPReD Upload [EpLink]"
+            class="md-footer-nav__link md-footer-nav__link--next"
+            rel="next"
+          >
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SPReD Upload [EpLink]
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Greydon Gilmore
+          </div>
+        
+      </div>
+
+      <!-- Social links -->
+      
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+      <script src="../assets/javascripts/vendor.de50e36d.min.js"></script>
+      <script src="../assets/javascripts/bundle.dd72b84b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
