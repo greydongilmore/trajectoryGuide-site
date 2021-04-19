@@ -2,11 +2,13 @@
 template: overrides/main_noedit.html
 ---
 
-<center><em>An open-source software for neurosurgical surgical trajectory planning, visualization, and postoperative assessment</em></center>
+<center><img src="img/trajectoryGuide.svg" alt="drawing" style="width:80%;"/></center>
+
+<center><em>An open-source software for neurosurgical trajectory planning, visualization, and postoperative assessment</em></center>
 
 ---
 
-<p align="center"><img src="img/main_interface.png" alt="drawing"/></p>
+<p align="center"><img src="img/main_interface.png" alt="drawing"/></p><br>
 
 **trajectoryGuide** provides the capability to plan surgical trajectories within 3D Slicer, an open-source medical imaging software. trajectoryGuide contains modules that span the three phases of neurosurgical trajectory planning:
 

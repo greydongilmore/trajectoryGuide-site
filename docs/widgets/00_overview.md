@@ -4,30 +4,33 @@ title: Overview
 ---
 
 ## What is DBS?
--------------------
-DBS, short for Deep Brain Stiumation, is an established surgical treatment for people with movement disroders, such as Parkinson's disease and dystonia. It involves implanting electrodes (thin metal wires) within certain areas of the brain and sending electrical impulses to the brain through these electrodes. The electrical impulses are controlled a device that's implanted by the chest.
 
-<p align="center"><img src="img/patientOverview.png" alt="patientOverview" width="20%"/></p>
+Deep Brain Stimulation (DBS), is an established neurosurgical treatment for individuals living with a movement disorder, such as Parkinsons disease. The surgical process involves chronic implantation of stimulation electrodes within specific areas of the brain. The electrodes send electrical impulses to the brain to alleviate motor symptoms associated with the movement disorder.
 
+<center>
+    <figure>
+    <img src="img/patientOverview.jpg" alt="patientOverview" width="40%"/>
+    <figcaption>Diagram from: https://mayfieldclinic.com/pe-dbs.htm</figcaption>
+    </figure>
+</center>
 
-Diagram from: https://mayfieldclinic.com/pe-dbs.htm
+Learn more about deep brain stimulation <a href="https://mayfieldclinic.com/pe-dbs.html" target="_blank">here</a>.
 
-Learn more about deep brain stimulation <a href="https://mayfieldclinic.com/pe-dbs.html" target="_blank">here</a>
-
+<br>
 
 ## What is trajectoryGuide?
 
-**trajectoryGuide** provides the capability to plan surgical trajectories within 3D Slicer, an open-source medical imaging software. trajectoryGuide contains modules that span the three phases of neurosurgical trajectory planning
+**trajectoryGuide** is an open-source software suite that provides the capability to plan neurosurgical trajectories within 3D Slicer. **trajectoryGuide** contains several modules that span the three phases of surgical intervention: pre-op, intra-op, and post-op.
 
 ## What is 3D Slicer?
 
-3D Slicer is an open-source software platform for medical image informatics, image processing, and 3D visualization. Built over two decades through support from the National Institutes of Health and a worldwide developer community, Slicer brings free, powerful cross-platform (Linux, MacOSX, and Windows) processing tools to physicians, researchers, and the general public.
+3D Slicer is an open-source software platform for medical image informatics, image processing, and 3D visualization. Slicer brings free, powerful cross-platform (Linux, MacOSX, and Windows) processing tools to physicians, researchers, and the general public.
 
 ### 3D Slicer Features
 
 Multi-organ: from head to toe Support for multi-modality imaging including: MRI, CT, US, nuclear medicine, and microscopy Bidirectional interface for devices
 
-<p align="center"><img src="../img/3DSlicer.png" alt="3DSlicer" width="50%"/></p>
+<p align="center"><img src="img/3DSlicer.png" alt="3DSlicer"/></p>
 
 ## Sources
 

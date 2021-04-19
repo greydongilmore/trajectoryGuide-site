@@ -3,15 +3,19 @@ template: overrides/main.html
 title: Patient Directory
 ---
 
-Once you've loaded trajectoryGuide into Slicer (see <a href="https://github.com/trajectoryGuide/widgets/installation.html" target="_blank">installation instructions</a>), you can begin using trajectoryGuide. The first step is to load the patients' imaging data as a directory (hence, the name Patient Directory). trajectoryGuide will copy the imaging data into a `source` directory as a backup, these files will remain unchanged.
+If you have not installed **trajectoryGuide** into 3D Slicer please follow the <a href="https://github.com/trajectoryGuide/widgets/installation.html" target="_blank">installation instructions</a>). 
+
+The first module in **trajectoryGuide** handles the import of patient imaging data. The data should be within a single directory, this directory will be selected within the import window (do not select the files within the directory). During the initial data import for a patient, **trajectoryGuide** will store a copy of the imaging data into a `source` directory as a backup, these files will remain unchanged.
 
 ## Load patient directory
 
-An example directory is shown below. Notice, you only select the patient directory/folder and not the files within the folder. This directory contains the imaging data in *NIFTI (Neuroinformatics Technology Initiative)* format, with the file extension `.nii.gz`. If the original imaging data is in DICOM format, the files will first be converted to NIFTI, while the source data will remain DICOM.
+An example patient directory is shown below. **trajectoryGuide** will store the imaging data in *NIFTI (Neuroinformatics Technology Initiative)* format, with the file extension `.nii.gz`. If the original imaging data is in DICOM format, the files will be converted to NIFTI (the `source` directory will still contain the original DICOM files).
 
-<br><p align="center"><img src="img/exDirectory.png" alt="exDirectory" /></p><br>
+<br><p align="center"><img src="img/patient_directory_import.png" alt="patient_directory_import" /></p><br>
 
-Adjust import options prior to loading the patient directory.
+You will notice that each imaging file has an associated `.json` file. This file contains metadata associated with the imaging file as it progresses through the **trajectoryGuide** workflow. 
+
+Select the import options prior to loading the patient directory.
     
 <br><p align="center"><img src="img/patient_directory_wig.png" alt="patient_directory_wig" /></p><br>
 
@@ -22,13 +26,20 @@ Adjust import options prior to loading the patient directory.
 
 ## Adjust surgical metadata
 
-Once you click `Load Data`, another widget will appear below the patient directory widget. This will store surgical metadata information:
+Once you click `Load Data`, another widget will appear below the patient directory widget. This new widget stores surgical metadata about the patient.
 
 <br><p align="center"><img src="img/surgery_metadata.png" alt="screenPostLoad" /></p><br>
 
-* Date
-* Patient Name/ID
-* Surgeon
+* **Name**: the identifier given to the patient, the default value will be the name of the patient directory.
+* **OR Date:** the date of the surgical intervention.
+* **Surgeon:** the name of the surgeon who carried out the surgical intervention. This drop-down box has an option to add additional surgeons.
+
+    <br><p align="center"><img src="img/surgeon_other.png" alt="surgeon_other" /></p><br>
+
+    When `Other` is selected, a line edit box will appear to the right. When you finish entering the surgeon name press the `Enter` key.<br><br>
+
+* **Target:** the name of the surgical target. This drop-down box has an option to add additional targets.<br>
+    When `Other` is selected, a line edit box will appear to the right. When you finish entering the surgeon name press the `Enter` key.
 
 <br>
 <br>

@@ -3,28 +3,37 @@ template: overrides/main.html
 title: Frame Detection
 ---
 
-## Run automatic frame detection
-
-<p align="center"><img src="img/frame_detection.png" alt="frame_detection"/></p>
-
-Click on the drop down menu next to `Fiducial Volume` and select the volume containing the stereotactic frame. Select the stereotactic frame you are using and press `Detect Frame Fiducials`. If the automatic detection was successful you will see an image like this:
-
-<p align="center"><img src="img/detected_fiducials.png" alt="frameDet1"/></p>
-
 !!! note
     To navigate through the 2D view:<br>
     **Move across scan**: hold `Shift` while moving the mouse<br>
     **Zoom in/out**: hold the `right` mouse button while moving mouse up/down (can hold `Control/Command` and scroll)
 
-You can scroll up/down the slices to check the accuracy of the frame detection. The labels shown are a combination of the fiducial point number and the Z axis coordinate. You may also notice the fiducial points for the frame center and midpoints on the diagonal bars of the N-localizer.
+## Automatic frame detection
 
-When you are satisfied with the results select `Confirm Frame Fiducials`. If you are not satisfied, you can move on to manual frame detection.
+Automatic frame detection will only work if the frame was captured with CT. From the drop-down menu, next to `Fiducial Volume`, select the volume containing the stereotactic frame. Choose the stereotactic frame that is captured in the CT volume and press `Detect Frame Fiducials`. 
 
-## Run manual frame detection
+<br><p align="center"><img src="img/frame_detection.png" alt="frame_detection"/></p><br>
 
-To run manual frame detection select the button `Manual Dection`. A set of 9 point fiducials will appear, which you will define on the same axial slice.
+If the automatic detection was successful you will see an image like this:
 
-<p align="center"><img src="img/manual_frame_dection.png" alt="manual_frame_dection" width="30%"/></p>
+<br><p align="center"><img src="img/detected_fiducials.png" alt="frameDet1"/></p><br>
+
+
+
+Scroll up/down the slices to check the accuracy of the frame detection. The labels shown are a combination of the fiducial point number and the Z axis coordinate. You will also notice fiducial points for the frame center and the midpoints of the N-localizer diagonal bars.
+
+If you are satisfied with the results select `Confirm Frame Fiducials`. If you are not satisfied, you can move to the manual frame detection step.
+
+## Manual frame detection
+
+To run manual frame detection select the button `Manual Detection`. You will need to identify each frame fiducial one-by-one. If you are unsure of how the stereotactic frame fiducials are numbered you can press `Frame Fiducial Legend` to see the mapping. All point fiducials will need to be placed on the same axial slice. When you are finished, press 
+`Confirm Frame Fiducials`.
+
+<br><p align="center"><img src="img/manual_frame_dection.png" alt="manual_frame_dection" width="30%"/></p><br>
+
+## Leksell frame system
+
+<br><p align="center"><img src="img/leksell_drawing.svg" alt="leksell_drawing" width="70%"/></p><br>
 
 
 <br>
