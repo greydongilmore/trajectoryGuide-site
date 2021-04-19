@@ -48,6 +48,7 @@ This algorithm gives the user more control over each step. The user can specify 
 * **smoothing:** smoothing factor applied in each hierarchical step  (default 3x2x1x0x0vox)
 
 ### ANTS - antsRegistrationSyNQuick
+
 * **transform type:** rigid, rigid+affine, rigid+affine+syn, rigid+syn, rigid+affine+b-spl syn, rigid+b-spl syn
     - **rigid:** rigid (1 stage)
     - **rigid+affine:** rigid + affine (2 stages)
