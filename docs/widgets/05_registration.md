@@ -16,17 +16,23 @@ title: Registration
 
 ### NiftyReg - reg_aladin
 
+For information about this algorithm you can visit <a href="https://www.nitrc.org/projects/niftyreg/" target="_blank">this page</a>.
+
 * **interpolation order:** nearest neighbor, cubic, sinc, linear (default nearest neighbor)
 
 ### FSL - flirt
 
+For information about this algorithm you can visit <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FLIRT/UserGuide" target="_blank">this page</a>.
+
 * **interpolation order:** nearest neighbor, spline, sinc, trilinear (default trilinear)
-* **cost:** mutual info, correlation ratio, least square, normalized correlation, normalized mutual info (default corratio)
-* **search cost:** mutual info, correlation ratio, least square, normalized correlation, normalized mutual info (default corratio)
-* **coarse search:** search delta angle to use during initial grid search (default 60)
-* **fine search:**  search delta angle to use during final grid search (default 18)
+* **cost:** used during the second stage. Options are: mutual info, correlation ratio, least square, normalized correlation, normalized mutual info (default corratio)
+* **search cost:** used during initial search stage. Options are: mutual info, correlation ratio, least square, normalized correlation, normalized mutual info (default corratio)
+* **coarse search:** search delta angle to use during initial alignment between the images (default 60)
+* **fine search:**  search delta angle to use during final alignment between the images (default 18)
 
 ### ANTS - antsRegistration
+
+For information about this algorithm you can visit <a href="https://www.nitrc.org/projects/ants" target="_blank">this page</a>.
 
 This algorithm gives the user more control over each step. The user can specify the "stages" of registration, where a stage consists of a transform and an image metric. Each stage consists of levels with specific values set for iterations, shrink factors, and smoothing sigmas.
 
@@ -41,7 +47,7 @@ This algorithm gives the user more control over each step. The user can specify 
     - i.e. for an image with 256x256x256 voxels, the levels will work on images of size 32mm, 64mm, 128mm, and 256mm
 * **smoothing:** smoothing factor applied in each hierarchical step  (default 3x2x1x0x0vox)
 
-### ANTS - antsRegistration
+### ANTS - antsRegistrationSyNQuick
 * **transform type:** rigid, rigid+affine, rigid+affine+syn, rigid+syn, rigid+affine+b-spl syn, rigid+b-spl syn
     - **rigid:** rigid (1 stage)
     - **rigid+affine:** rigid + affine (2 stages)
