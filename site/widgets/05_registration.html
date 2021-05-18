@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#registration-settings" class="md-skip">
+        <a href="#patient-space-registration" class="md-skip">
           Skip to content
         </a>
       
@@ -375,23 +375,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#registration-settings" class="md-nav__link">
-    Registration settings
+  <a href="#patient-space-registration" class="md-nav__link">
+    Patient Space Registration
   </a>
+  
+    <nav class="md-nav" aria-label="Patient Space Registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration-settings" class="md-nav__link">
+    Registration Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-registration-results" class="md-nav__link">
+    Check Registration Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#choose-registration-algorithm" class="md-nav__link">
-    Choose registration algorithm
+  <a href="#algorithms" class="md-nav__link">
+    Algorithms
   </a>
   
-    <nav class="md-nav" aria-label="Choose registration algorithm">
+    <nav class="md-nav" aria-label="Algorithms">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#niftyreg-reg_aladin" class="md-nav__link">
     NiftyReg - reg_aladin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ants-antsregistrationsynquick" class="md-nav__link">
+    ANTS - antsRegistrationSyNQuick
   </a>
   
 </li>
@@ -410,21 +437,14 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#ants-antsregistrationsynquick" class="md-nav__link">
-    ANTS - antsRegistrationSyNQuick
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-registration-algorithm" class="md-nav__link">
-    Run registration algorithm
+  <a href="#template-space-registration" class="md-nav__link">
+    Template Space Registration
   </a>
   
 </li>
@@ -433,6 +453,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="06_anatomical_fiducials.html" title="Anatomical Fiducials" class="md-nav__link">
+      Anatomical Fiducials
+    </a>
   </li>
 
         
@@ -477,23 +509,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#registration-settings" class="md-nav__link">
-    Registration settings
+  <a href="#patient-space-registration" class="md-nav__link">
+    Patient Space Registration
   </a>
+  
+    <nav class="md-nav" aria-label="Patient Space Registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration-settings" class="md-nav__link">
+    Registration Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-registration-results" class="md-nav__link">
+    Check Registration Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#choose-registration-algorithm" class="md-nav__link">
-    Choose registration algorithm
+  <a href="#algorithms" class="md-nav__link">
+    Algorithms
   </a>
   
-    <nav class="md-nav" aria-label="Choose registration algorithm">
+    <nav class="md-nav" aria-label="Algorithms">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#niftyreg-reg_aladin" class="md-nav__link">
     NiftyReg - reg_aladin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ants-antsregistrationsynquick" class="md-nav__link">
+    ANTS - antsRegistrationSyNQuick
   </a>
   
 </li>
@@ -512,21 +571,14 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#ants-antsregistrationsynquick" class="md-nav__link">
-    ANTS - antsRegistrationSyNQuick
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-registration-algorithm" class="md-nav__link">
-    Run registration algorithm
+  <a href="#template-space-registration" class="md-nav__link">
+    Template Space Registration
   </a>
   
 </li>
@@ -556,20 +608,72 @@
   
     <h1>Registration</h1>
   
-  <h2 id="registration-settings">Registration settings<a class="headerlink" href="#registration-settings" title="Permanent link">&para;</a></h2>
-<p align="center"><img src="img/image_registration.png" alt="widget04" /></p>
-
+  <h2 id="patient-space-registration">Patient Space Registration<a class="headerlink" href="#patient-space-registration" title="Permanent link">&para;</a></h2>
+<p>All registrations with patient scans will be rigid registrations. With some of the more advanced algorithms you can override this and run non-linear registration but it is strongly discouraged. See the below <a href="05_registration.html#algorithm"><strong>Algorithms</strong></a> to learn more about each algorithm and the respective settings.</p>
+<p><center>
+    <figure>
+        <img src="img/patient_space_registration.png" alt="patient_space_registration"/>
+        <figcaption>Patient space registration settings.</figcaption>
+    </figure>
+</center></p>
+<h3 id="registration-settings">Registration Settings<a class="headerlink" href="#registration-settings" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Reference Volume:</strong> the imaging volume that all other images will be registered to.</li>
-<li><strong>CT Frame:</strong> the imaging volume contains the sterotactic frame.</li>
-<li><strong>Template Space (optional):</strong> select the template space to be registered to the patients space. </li>
-<li><strong>Floating volumes:</strong> the imaging volumes that will be co-registered to the reference volume. You can un-check any imaging volumes you do not want registered.</li>
+<li><strong>Reference Volume:</strong> the scan that all other scans will be registered to (generally the pre-operative T1w scan).</li>
+<li><strong>Frame Volume:</strong> the scan that contains the sterotactic frame (either MRI or CT).</li>
+<li><strong>Floating volumes:</strong> the scans that will be co-registered to the reference volume. You can un-check any scans you do not want registered, all scans checked in this drop-down box will be registered.</li>
 </ul>
-<h2 id="choose-registration-algorithm">Choose registration algorithm<a class="headerlink" href="#choose-registration-algorithm" title="Permanent link">&para;</a></h2>
+<p>Within the <strong>Reference Volume</strong> drop-down box, select the scan you want to co-register all other scans to (Reference). In the <strong>Frame Volume</strong> drop-down box, select the scan that contains the stereotactic fiducials. In the <strong>Floating Volumes</strong> drop-down box, all other scans (floating) will be checked to indicate they will be registered to the reference. If there are any floating scans you do not want registered, uncheck them.</p>
+<p><center>
+    <figure>
+        <img src="img/patient_space_floating_volumes.png" alt="patient_space_dropdowns"/>
+        <figcaption>Patient space drop-down volume boxes.</figcaption>
+    </figure>
+</center></p>
+<p>To begin the registration, press the <strong>Run Registration</strong> button. The <strong>Registration Process</strong> box will display updated information during the registration. When the registration is complete, the view will be automatically changed to a compare view.</p>
+<p><center>
+    <figure>
+        <img src="img/registration_status_box.png" alt="registration_status_box"/>
+        <figcaption>Patient space drop-down volume boxes.</figcaption>
+    </figure>
+</center></p>
+<h3 id="check-registration-results">Check Registration Results<a class="headerlink" href="#check-registration-results" title="Permanent link">&para;</a></h3>
+<p>For each registration you will either select <span style="color:green"><strong>Confirm Registration</strong></span> or <span style="color:red"><strong>Decline Registration</strong></span>. If you choose to decline a registration, the registration can be re-run with a different algorithm. To check the registration, it is helpful to use the opacity slider to change the opacity of the foreground scan (floating scan).</p>
+<p><center>
+    <figure>
+        <img src="img/registration_compare.png" alt="registration_opacity_slider"/>
+        <figcaption>Patient space drop-down volume boxes.</figcaption>
+    </figure>
+</center></p>
+<p>You can also use the <strong>Layer Reveal</strong> tool to check the registration in more detail. This tool displays a square that contains half the foreground scan and half the background scan.</p>
+<p><center>
+    <figure>
+        <img src="img/layer_reveal.png" alt="layer_reveal"/>
+        <figcaption>Registration layer reveal tool.</figcaption>
+    </figure>
+</center></p>
+<p>When finished checking the registrations, any confirmed registered scans will disappear from the <strong>Floating Volumes</strong> drop-down box, declined scans will still appear in the drop-down box. To re-run the registration, update any settings and press the <strong>Run Registration</strong> button, all previous registration information, for the current floating scans, will be erased.</p>
+<h2 id="algorithms">Algorithms<a class="headerlink" href="#algorithms" title="Permanent link">&para;</a></h2>
+<p>The default algorithm will be NiftyReg using nearest neighbor interpolation when applying the transform. You are able to change the registration algorithm and parameters according to the following information.</p>
 <h3 id="niftyreg-reg_aladin">NiftyReg - reg_aladin<a class="headerlink" href="#niftyreg-reg_aladin" title="Permanent link">&para;</a></h3>
 <p>For information about this algorithm you can visit <a href="https://www.nitrc.org/projects/niftyreg/" target="_blank">this page</a>.</p>
 <ul>
 <li><strong>interpolation order:</strong> nearest neighbor, cubic, sinc, linear (default nearest neighbor)</li>
+</ul>
+<h3 id="ants-antsregistrationsynquick">ANTS - antsRegistrationSyNQuick<a class="headerlink" href="#ants-antsregistrationsynquick" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>transform type:</strong> rigid, rigid+affine, rigid+affine+syn, rigid+syn, rigid+affine+b-spl syn, rigid+b-spl syn<ul>
+<li><strong>rigid:</strong> rigid (1 stage)</li>
+<li><strong>rigid+affine:</strong> rigid + affine (2 stages)</li>
+<li><strong>rigid+affine+syn:</strong> rigid + affine + deformable syn (3 stages)</li>
+<li><strong>rigid+syn:</strong> rigid + deformable syn (2 stages)</li>
+<li><strong>rigid+affine+b-spl syn:</strong> rigid + affine + deformable b-spline syn (3 stages)</li>
+<li><strong>rigid+b-spl syn:</strong> rigid + deformable b-spline syn (2 stages)</li>
+</ul>
+</li>
+<li><strong>threads:</strong> number of threads to use</li>
+<li><strong>cc radius:</strong> histogram bins for mutual information in SyN stage (default = 32)</li>
+<li><strong>spline distance:</strong> spline distance for deformable B-spline SyN transform (default = 26)</li>
+<li><strong>histogram matching:</strong> use histogram matching (default = 0)</li>
 </ul>
 <h3 id="fsl-flirt">FSL - flirt<a class="headerlink" href="#fsl-flirt" title="Permanent link">&para;</a></h3>
 <p>For information about this algorithm you can visit <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FLIRT/UserGuide" target="_blank">this page</a>.</p>
@@ -599,23 +703,7 @@
 </li>
 <li><strong>smoothing:</strong> smoothing factor applied in each hierarchical step  (default 3x2x1x0x0vox)</li>
 </ul>
-<h3 id="ants-antsregistrationsynquick">ANTS - antsRegistrationSyNQuick<a class="headerlink" href="#ants-antsregistrationsynquick" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>transform type:</strong> rigid, rigid+affine, rigid+affine+syn, rigid+syn, rigid+affine+b-spl syn, rigid+b-spl syn<ul>
-<li><strong>rigid:</strong> rigid (1 stage)</li>
-<li><strong>rigid+affine:</strong> rigid + affine (2 stages)</li>
-<li><strong>rigid+affine+syn:</strong> rigid + affine + deformable syn (3 stages)</li>
-<li><strong>rigid+syn:</strong> rigid + deformable syn (2 stages)</li>
-<li><strong>rigid+affine+b-spl syn:</strong> rigid + affine + deformable b-spline syn (3 stages)</li>
-<li><strong>rigid+b-spl syn:</strong> rigid + deformable b-spline syn (2 stages)</li>
-</ul>
-</li>
-<li><strong>threads:</strong> number of threads to use</li>
-<li><strong>cc radius:</strong> histogram bins for mutual information in SyN stage (default = 32)</li>
-<li><strong>spline distance:</strong> spline distance for deformable B-spline SyN transform (default = 26)</li>
-<li><strong>histogram matching:</strong> use histogram matching (default = 0)</li>
-</ul>
-<h2 id="run-registration-algorithm">Run registration algorithm<a class="headerlink" href="#run-registration-algorithm" title="Permanent link">&para;</a></h2>
+<h2 id="template-space-registration">Template Space Registration<a class="headerlink" href="#template-space-registration" title="Permanent link">&para;</a></h2>
 <p>Click <code>Run Registration</code>. The registration progression will be updated within the <code>Registration Progress</code> window. Once registration is completed, you will see the co-registered volumes appear in the floating drop-down box (under <code>Co-registered Volumes</code>).</p>
 <p>You will now confirm that the registration results by clicking the <code>Compare Volumes</code> button. For each registration you will either select <code>Confirm Registration</code> or <code>Decline Registration</code>. If you choose to decline a registration, you will be able to re-run the registration with a different algorithm.</p>
 <p><br>
@@ -695,8 +783,8 @@
         <!-- Link to next page -->
         
           <a
-            href="../about.html"
-            title="About"
+            href="06_anatomical_fiducials.html"
+            title="Anatomical Fiducials"
             class="md-footer-nav__link md-footer-nav__link--next"
             rel="next"
           >
@@ -705,7 +793,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                About
+                Anatomical Fiducials
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

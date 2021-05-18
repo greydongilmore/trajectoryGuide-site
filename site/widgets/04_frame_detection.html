@@ -367,6 +367,19 @@
     Automatic frame detection
   </a>
   
+    <nav class="md-nav" aria-label="Automatic frame detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjust-frame-registration-settings" class="md-nav__link">
+    Adjust frame registration settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -398,6 +411,18 @@
   <li class="md-nav__item">
     <a href="05_registration.html" title="Registration" class="md-nav__link">
       Registration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="06_anatomical_fiducials.html" title="Anatomical Fiducials" class="md-nav__link">
+      Anatomical Fiducials
     </a>
   </li>
 
@@ -447,6 +472,19 @@
     Automatic frame detection
   </a>
   
+    <nav class="md-nav" aria-label="Automatic frame detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjust-frame-registration-settings" class="md-nav__link">
+    Adjust frame registration settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -491,19 +529,51 @@
   <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To navigate through the 2D view:<br>
-<strong>Move across scan</strong>: hold <code>Shift</code> while moving the mouse<br>
-<strong>Zoom in/out</strong>: hold the <code>right</code> mouse button while moving mouse up/down (can hold <code>Control/Command</code> and scroll)</p>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>Move crosshairs in all views</strong>: hold <code>Shift</code> while moving the mouse<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>Zoom in/out</strong>: hold the <code>right</code> mouse button while moving mouse up/down (can hold <code>Control/Command</code> and scroll)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>Pan (translate) scan</strong>: hold <code>middle-mouse button</code> while moving the mouse<br></p>
 </div>
 <h2 id="automatic-frame-detection">Automatic frame detection<a class="headerlink" href="#automatic-frame-detection" title="Permanent link">&para;</a></h2>
-<p>Automatic frame detection will only work if the frame was captured with CT. From the drop-down menu, next to <code>Fiducial Volume</code>, select the volume containing the stereotactic frame. Choose the stereotactic frame that is captured in the CT volume and press <code>Detect Frame Fiducials</code>. </p>
-<p><br><p align="center"><img src="img/frame_detection.png" alt="frame_detection"/></p><br></p>
+<p>Automatic frame detection will work for CT and MRI. From the drop-down menu, next to <code>Fiducial Volume</code>, select the volume containing the stereotactic frame. Choose the stereotactic frame that is captured in the CT volume and press <code>Detect Frame Fiducials</code>. </p>
+<p><center>
+    <figure>
+        <img src="img/frame_detection.png" alt="frame_detection"/>
+        <figcaption>Frame detection widget interface.</figcaption>
+    </figure>
+</center><br></p>
 <p>If the automatic detection was successful you will see an image like this:</p>
-<p><br><p align="center"><img src="img/detected_fiducials.png" alt="frameDet1"/></p><br></p>
-<p>Scroll up/down the slices to check the accuracy of the frame detection. The labels shown are a combination of the fiducial point number and the Z axis coordinate. You will also notice fiducial points for the frame center and the midpoints of the N-localizer diagonal bars.</p>
-<p>If you are satisfied with the results select <code>Confirm Frame Fiducials</code>. If you are not satisfied, you can move to the manual frame detection step.</p>
+<p><center>
+    <figure>
+        <img src="img/detected_fiducials.png" alt="frame_fiducials"/>
+        <figcaption>Frame fiducials with frame registration errors.</figcaption>
+    </figure>
+</center><br></p>
+<p>Scroll up/down the slices to check the accuracy of the frame detection. The displayed numbers are the fiducial registration errors, lower values indicate a more accurate registration. Values lower than 0.5mm appear in <span style="color:green"><strong>Green</strong></span>, while values above 0.5mm appear in <span style="color:red"><strong>Red</strong></span>. On the left-hand side you will see the overall frame registration error (anything below 0.5 mm should be acceptable).</p>
+<p>If you are satisfied with the results, select <strong>Confirm Frame Fiducials</strong>. If you are not satisfied, you can try adjusting frame registration settings and re-run autodection (see ensuing section).</p>
+<h3 id="adjust-frame-registration-settings">Adjust frame registration settings<a class="headerlink" href="#adjust-frame-registration-settings" title="Permanent link">&para;</a></h3>
+<p>You can modify the default frame registration settings by clicking the <strong>Advanced Settings</strong> box in the frame detection widget.</p>
+<p><center>
+    <figure>
+        <img src="img/frame_advanced_settings.png" alt="frame_detection_settings"/>
+        <figcaption>Frame detection advanced settings.</figcaption>
+    </figure>
+</center></p>
+<ul>
+<li><strong>Transform type (default: Rigidbody):</strong> Rigidbody, Similarity, Affine.</li>
+<li><strong>Iterations (default: 100):</strong> Set the maximum number of iterations.</li>
+<li><strong>Max Landmarks (default: 200):</strong> Set the maximum number of frame fiducials to use, each slice in the CT scan contains a set of fiducial points. For instance, if a CT scan is acquired with 124 slices, using a Leksell frame, there would be ~600 fiducial points.</li>
+<li><strong>Match Centroids (default: No):</strong> Starts the process by translating source centroid to target centroid.</li>
+</ul>
+<p>The first parameter to adjust would be <strong>Match Centroids</strong>, select <strong>Yes</strong> and would will see a pop-up message asking if you want to overwrite the previous frame registration data, select <strong>Yes</strong>:</p>
+<p><center>
+    <figure>
+        <img src="img/frame_detection_message.png" alt="frame_detection_message"/>
+        <figcaption>Frame detection pop-up message.</figcaption>
+    </figure>
+</center></p>
+<p>If you are still not happy with the registration, try increasing the number of iterations to 200 and re-run. The other parameter you can adjust is the number of iterations, increasing the value to 300. The last choice would be to adjust the transform type, however this will introduce some non-linearity into the registration.</p>
 <h2 id="manual-frame-detection">Manual frame detection<a class="headerlink" href="#manual-frame-detection" title="Permanent link">&para;</a></h2>
-<p>To run manual frame detection select the button <code>Manual Detection</code>. You will need to identify each frame fiducial one-by-one. If you are unsure of how the stereotactic frame fiducials are numbered you can press <code>Frame Fiducial Legend</code> to see the mapping. All point fiducials will need to be placed on the same axial slice. When you are finished, press 
-<code>Confirm Frame Fiducials</code>.</p>
+<p>To run manual frame detection select the button <strong>Manual Detection</strong>. You will need to identify each frame fiducial one-by-one on the same axial slice. If you are unsure of how the stereotactic frame fiducials are numbered you can press <code>Frame Fiducial Legend</code> to see the mapping. All point fiducials will need to be placed on the same axial slice. When you are finished, press <strong>Confirm Frame Fiducials</strong>.</p>
 <p><br><p align="center"><img src="img/manual_frame_dection.png" alt="manual_frame_dection" width="30%"/></p><br></p>
 <h2 id="leksell-frame-system">Leksell frame system<a class="headerlink" href="#leksell-frame-system" title="Permanent link">&para;</a></h2>
 <p><br><p align="center"><img src="img/leksell_drawing.svg" alt="leksell_drawing" width="70%"/></p><br></p>

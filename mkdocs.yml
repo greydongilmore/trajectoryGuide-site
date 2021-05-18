@@ -33,6 +33,7 @@ theme:
 markdown_extensions:
   - admonition
   - codehilite
+  - attr_list
   - toc:
       permalink: true
   - pymdownx.superfences
@@ -63,4 +64,5 @@ nav:
     - Patient Directory: widgets/01_patient_directory.md
     - Frame Detection: widgets/04_frame_detection.md
     - Registration: widgets/05_registration.md
+    - Anatomical Fiducials: widgets/06_anatomical_fiducials.md
   - About: about.md
