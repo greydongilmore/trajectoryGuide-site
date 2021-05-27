@@ -3,65 +3,85 @@ template: overrides/main_noedit.html
 title: Installation
 ---
 
+# Installation
+
 ## Requirements
 
-1. **3D Slicer**
-    - 3D Slicer **(Version 4.11.0 or later)**, Download here: https://download.slicer.org/
+### 3D Slicer
 
-2. **trajectoryGuide source code**
-    - download the latest version of trajectoryGuide
+- 3D Slicer **(Version 4.11.0 or later)**, Download from the <a href="https://download.slicer.org/" target="_blank">3D Slicer website</a>.
 
-    Unzip the folder and save it somewhere on your system. For this tutorial, the file
-    has been saved in Desktop.
+### trajectoryGuide source code
 
-## Loading trajectoryGuide into 3D Slicer
+- download the latest version of trajectoryGuide from the <a href="https://github.com/greydongilmore/trajectoryGuide" target="_blank">GitHub repository</a>.
+- unzip the folder and save it somewhere on your system
 
-1. Open 3D Slicer
+### Template space directory
 
-    It should look like this (if you have/don't have a Python Interactor 
-    at the bottom, that is fine)
+- you will need to download the template space directory from this <a href="https://drive.google.com/file/d/1qlJXICMB-P0FxyjGA1PvGtsPkfjw5wn6/view?usp=sharing" target="_blank">Google drive folder</a>.
+- you will need to unzip this folder and place it inside the trajectoryGuide directory at the path `resources/ext_libs/space`
 
-    <p align="center"><img src="img/slicer_welcome.png" alt="slicer_welcome"/></p>
+## 3D Slicer setup
 
-2. Load **trajectoryGuide** module
+### Install Python libraries
 
-    On the top menu bar next to "**Modules**", 
-    select the drop down menu and go to "**Developer Tools**", then select "**Extension Wizard**." 
-    Under Extension Tools, press "**Select Extension.**" 
+1. You will first need to install a few Python libraries before loading trajectoryGuide. Click the Blue and Yellow Python button located in the top menu to the right.
 
-    <p align="center"><img src="img/ExtWizard.png" alt="widget01" /></p>
+    <center>
+        <figure>
+            <img src="/widgets/img/python_icon.png" alt="python_icon"/>
+            <figcaption>Python interactor button.</figcaption>
+        </figure>
+    </center>
 
-    Select the trajectoryGuide-master folder and open it
+2. The Python interactor should now be visible at the bottom of the 3D Slicer window.
 
-    <p align="center"><img src="img/Module-Open.png" alt="widget01"/></p>
+    <center>
+        <figure>
+            <img src="/widgets/img/python_interactor.png" alt="python_interactor"/>
+            <figcaption>3D Slicer Python interactor.</figcaption>
+        </figure>
+    </center>
 
+3. Copy and paste the command below into the Python interactor box, press `Enter` to run the command.
 
-3. Pop-up Window
+    ```console
+    pip_install('scikit-image pandas scipy shapely')
 
-    A window will pop up. Make sure both options are selected and press yes. 
+    ```
 
-    <p align="center"><img src="img/Module-Path-Confirm.png" alt="widget01" /></p><br>
+### Add trajectoryGuide module
 
-    The **trajectoryGuide** module is now apart of Slicer.
-    <br><br>
+1. In the top menu, click on the `Edit` menu and select `Application settings`
 
+    <center>
+        <figure>
+            <img src="/widgets/img/edit_menu.png" alt="edit_menu"/>
+            <figcaption>3D Slicer Edit menu.</figcaption>
+        </figure>
+    </center>
 
-4. Open **trajectoryGuide** in Slicer
+2. In the settings dialog window select `Modules`, click the right-facing arrows next to the box with the text `Additional module paths` and click `Add`
 
-    To open it, go to the modules drop down menu
-    and select trajectoryGuide -> trajectoryGuide
+3. Navigate to where you stored the source code for trajectoryGuide, select the top (root) trajectoryGuide folder and click `Choose`
 
-    <p align="center"><img src="img/selectDBS.png" alt="widget01"/></p>
+    <center>
+        <figure>
+            <img src="/widgets/img/add_module.png" alt="add_module"/>
+            <figcaption>3D Slicer add module path.</figcaption>
+        </figure>
+    </center>
 
-    You have now successfully loaded trajectoryGuide into Slicer. Your screen should look like this:
+4. 3D Slicer will want to restart at this point, click `Yes`
 
-    <p align="center"><img src="img/DBSLaunch.png" alt="widget01" width="80%"/></p>
+    <center>
+        <figure>
+            <img src="/widgets/img/restart_slicer.png" alt="restart_slicer"/>
+            <figcaption>3D Slicer restart notification.</figcaption>
+        </figure>
+    </center>
 
-5. Reopening Slicer/trajectoryGuide
-
-    The next time you open Slicer, you don't have to go through the Extension Wizard. **trajectoryGuide** 
-    will be included in Slicer's modules. You may open **trajectoryGuide** straight from the Modules
-    drop down menu (**all you have to do is step 4 next time**)
+5. Now when 3D Slicer restarts, **trajectoryGuide** will be included in Slicer's modules menu.
 
 <br>
 <br>
