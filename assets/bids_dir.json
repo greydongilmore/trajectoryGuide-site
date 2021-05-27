@@ -1,0 +1,168 @@
+[
+  {
+    "text": "working_dir",
+    "icon": "fa fa-folder",
+    "nodes": [
+      {
+        "text": "output",
+        "icon": "fa fa-folder",
+        "nodes": [
+         {
+            "text": "sub-EPL31LHS0001",
+            "icon": "fa fa-folder",
+            "nodes": [
+              {
+                "text": "ses-V01SE01EEG",
+                "icon": "fa fa-folder",
+                "nodes": [
+                  {
+                    "text": "eeg",
+                    "icon": "fa fa-folder",
+                    "nodes": [
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE01EEG_electrodes.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE01EEG_task-clipret_run-01_annotations.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE01EEG_task-clipret_run-01_channels.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE01EEG_task-clipret_run-01_eeg.edf",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE01EEG_task-clipret_run-01_eeg.json",
+                        "icon": "fa fa-file"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": "ses-V01SE02EEG",
+                "icon": "fa fa-folder",
+                "nodes": [
+                  {
+                    "text": "eeg",
+                    "icon": "fa fa-folder",
+                    "nodes": [
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE02EEG_electrodes.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE02EEG_task-clipret_run-01_annotations.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE02EEG_task-clipret_run-01_channels.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE02EEG_task-clipret_run-01_eeg.edf",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE02EEG_task-clipret_run-01_eeg.json",
+                        "icon": "fa fa-file"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": "ses-V01SE03EEG",
+                "icon": "fa fa-folder",
+                "nodes": [
+                  {
+                    "text": "eeg",
+                    "icon": "fa fa-folder",
+                    "nodes": [
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE03EEG_electrodes.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE03EEG_task-clipret_run-01_annotations.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE03EEG_task-clipret_run-01_channels.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE03EEG_task-clipret_run-01_eeg.edf",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V01SE03EEG_task-clipret_run-01_eeg.json",
+                        "icon": "fa fa-file"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": "ses-V02SE01EEG",
+                "icon": "fa fa-folder",
+                "nodes": [
+                  {
+                    "text": "eeg",
+                    "icon": "fa fa-folder",
+                    "nodes": [
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V02SE01EEG_electrodes.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V02SE01EEG_task-clippro_run-01_annotations.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V02SE01EEG_task-clippro_run-01_channels.tsv",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V02SE01EEG_task-clippro_run-01_eeg.edf",
+                        "icon": "fa fa-file"
+                      },
+                      {
+                        "text": "sub-EPL31LHS0001_ses-V02SE01EEG_task-clippro_run-01_eeg.json",
+                        "icon": "fa fa-file"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": ".bidsignore",
+            "icon": "fa fa-file"
+          },
+          {
+            "text": "dataset_description.json",
+            "icon": "fa fa-file"
+          },
+          {
+            "text": "participants.json",
+            "icon": "fa fa-file"
+          },
+          {
+            "text": "participants.tsv",
+            "icon": "fa fa-file"
+          },
+          {
+            "text": "README",
+            "icon": "fa fa-file"
+          }
+        ]
+      }
+    ]
+  }
+]

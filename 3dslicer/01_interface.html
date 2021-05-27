@@ -1,0 +1,988 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Greydon Gilmore">
+      
+      <link rel="shortcut icon" href="../img/trajectoryGuide_icon.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+    
+    
+      
+        <title>3D Slicer Interface</title>
+      
+    
+    
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/bstreeview.min.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.545621a7.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.36d1b78f.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+
+    
+    
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7e31cfd31d.js" crossorigin="anonymous"></script>
+    <script src="../js/bstreeview.min.js"></script>
+
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="none" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interface-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="trajectoryGuide v1.0" class="md-header-nav__button md-logo" aria-label="trajectoryGuide v1.0">
+      
+  <img src="../img/trajectoryGuide.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            trajectoryGuide v1.0
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              3D Slicer Interface
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/trajectoryGuide/trajectoryGuide-site/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="trajectoryGuide v1.0" class="md-nav__button md-logo" aria-label="trajectoryGuide v1.0">
+      
+  <img src="../img/trajectoryGuide.png" alt="logo">
+
+    </a>
+    trajectoryGuide v1.0
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/trajectoryGuide/trajectoryGuide-site/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../installation.html" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Working in 3D Slicer
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Working in 3D Slicer" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Working in 3D Slicer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        User Interface
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="01_interface.html" title="User Interface" class="md-nav__link md-nav__link--active">
+      User Interface
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interface-overview" class="md-nav__link">
+    Interface Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Interface Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2d-views" class="md-nav__link">
+    2D Views
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-view" class="md-nav__link">
+    3D View
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mouse-keyboard-shortcuts" class="md-nav__link">
+    Mouse &amp; Keyboard Shortcuts
+  </a>
+  
+    <nav class="md-nav" aria-label="Mouse &amp; Keyboard Shortcuts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generic-shortcuts" class="md-nav__link">
+    Generic shortcuts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2d-views_1" class="md-nav__link">
+    2D Views
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-views" class="md-nav__link">
+    3D views
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="02_saving_data.html" title="Saving Data" class="md-nav__link">
+      Saving Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Modules" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../widgets/00_overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../widgets/01_patient_directory.html" title="Patient Directory" class="md-nav__link">
+      Patient Directory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../widgets/04_frame_detection.html" title="Frame Detection" class="md-nav__link">
+      Frame Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../widgets/05_registration.html" title="Registration" class="md-nav__link">
+      Registration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../widgets/06_anatomical_fiducials.html" title="Anatomical Fiducials" class="md-nav__link">
+      Anatomical Fiducials
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about.html" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interface-overview" class="md-nav__link">
+    Interface Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Interface Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2d-views" class="md-nav__link">
+    2D Views
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-view" class="md-nav__link">
+    3D View
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mouse-keyboard-shortcuts" class="md-nav__link">
+    Mouse &amp; Keyboard Shortcuts
+  </a>
+  
+    <nav class="md-nav" aria-label="Mouse &amp; Keyboard Shortcuts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generic-shortcuts" class="md-nav__link">
+    Generic shortcuts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2d-views_1" class="md-nav__link">
+    2D Views
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-views" class="md-nav__link">
+    3D views
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+  
+    <a href="https://github.com/trajectoryGuide/trajectoryGuide-site/blob/master/docs/3dslicer/01_interface.md" title="Edit this page" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg> <p style="margin-top:2px;">Edit this page</p>
+    </a>
+    <a href="https://github.com/greydongilmore/edf2bids-site/issues/new/choose" title="Open an issue" class="md-content__button md-icon" target="blank_" style="font-size: 14px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> <p style="margin-top:2px;">Open and issue</p>
+    </a>
+  
+  
+    
+  
+  
+    <h1>User Interface</h1>
+  
+  <div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ensure you are using <a href="https://download.slicer.org/" target="_blank"><strong>3D Slicer 4.11</strong></a></p>
+</div>
+<h2 id="interface-overview">Interface Overview<a class="headerlink" href="#interface-overview" title="Permanent link">&para;</a></h2>
+<p>Slicer stores all loaded data in a data repository, called the “scene” (or Slicer scene or MRML scene). Each data set, such as an image volume, surface model, or point set, is represented in the scene as a “node”.</p>
+<p>Slicer provides a large number “modules”, each implementing a specific set of functions for creating or manipulating data in the scene. Modules typically do not interact with each other directly: they just all operate on the data nodes in the scene. Slicer package contains over 100 built-in modules and additional modules can be installed by using the Extension Manager.</p>
+<p><br><img src="../img/3d_slicer_gui.svg" alt="3d_slicer_gui"/><br><br></p>
+<h3 id="2d-views">2D Views<a class="headerlink" href="#2d-views" title="Permanent link">&para;</a></h3>
+<p>Three default slice views are provided (with Red, Yellow and Green colored bars) in which Axial, Saggital, Coronal or Oblique 2D slices of volume images can be displayed. Additional generic slice views have a grey colored bar and an identifying number in their upper left corner.</p>
+<p><center><img src="../img/2d_slice_view_controls.png" alt="2d_slice_view_controls"/></center></p>
+<p>Slice View Controls: The colored bar across any Slice View shows a pushpin icon on its left. When the mouse rolls over this icon, a panel for configuring the slice view is displayed. The panel is hidden when the mouse moves away. For persistent display of this panel, just click the pushpin icon. For more options, click the double-arrow icon.</p>
+<p>View Controllers module provides an alternate way of displaying these controllers in the Module Panel.</p>
+<ul>
+<li><strong>Reset field of view</strong> (small square) centers the slice on the current background volume</li>
+<li><strong>Link</strong> button synchronizes properties (which volumes are displayed, zoom factor, position of parallel views, opacities, etc.) between all slice views in the same view group. Long-click on the button exposes <strong>hot-linked</strong> option, which controls when properties are synchronized (immediately or when the mouse button is released).</li>
+<li><strong>Eye</strong> button in the top row can show the current slice in 3D views. Drop-down menu of the button contains advanced options to customize how this slice is rendered: "...match volume" means that the properties are taken from the full volume, while "...match 2D" means that the properties are copied from the current slice view (for example, copies zoom and pan position). Typically these differences are subtle and the settings can be left at default.</li>
+<li><strong>Orientation Selection</strong> displays allows you to choose the orientation for this slice view.</li>
+<li><strong>Lightbox</strong> to select a mosiac (a.k.a. contact sheet) view.  Not all operations work in this mode and it may be removed in the future.</li>
+<li><strong>Reformat</strong> allows interactive manipulation of the slice orientation.</li>
+<li><strong>Blending options</strong> how foreground and background layers are mixed.</li>
+<li><strong>Spacing and Field of View</strong> Spacing defines the increment for the slice offset slider.  Field of view sets the zoom level for the slice.</li>
+<li><strong>Rotate to Volume Plane</strong> changes the orientation of the slice to match the closest acquisition orientation of the displayed volume</li>
+<li><strong>Show Orientation Marker</strong> controls display of human, cube, etc in lower right corner</li>
+<li><strong>Ruler</strong> controls display of ruler in slice view</li>
+</ul>
+<h3 id="3d-view">3D View<a class="headerlink" href="#3d-view" title="Permanent link">&para;</a></h3>
+<p>Displays a rendered 3D view of the scene along with visual references to specify orientation and scale.</p>
+<p>Default orientation axes:</p>
+<ul>
+<li>A = anterior; P = posterior</li>
+<li>R = right; L = left</li>
+<li>S = superior; I = inferior</li>
+</ul>
+<p><center><img src="../img/3d_slice_view_controls.png" alt="3d_slice_view_controls"/></center></p>
+<p>3D View Controls: The blue bar across any 3D View shows a pushpin icon on its left. When the mouse rolls over this icon, a panel for configuring the 3D View is displayed. The panel is hidden when the mouse moves away. For persistent display of this panel, just click the pushpin icon.</p>
+<h2 id="mouse-keyboard-shortcuts">Mouse &amp; Keyboard Shortcuts<a class="headerlink" href="#mouse-keyboard-shortcuts" title="Permanent link">&para;</a></h2>
+<p>The following summary of shortcuts is taken from the <a href="https://slicer.readthedocs.io/en/latest/user_guide/user_interface.html" target="_blank">3D Slicer documentation</a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The shortcuts are working on any stable 3D Slicer version &gt;=4.10.0</p>
+</div>
+<h3 id="generic-shortcuts">Generic shortcuts<a class="headerlink" href="#generic-shortcuts" title="Permanent link">&para;</a></h3>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl</code> + <code>f</code></td>
+<td>find module by name (hit <code>Enter</code> to select)</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>a</code></td>
+<td>add data from file</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>o</code></td>
+<td>add data from file</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>s</code></td>
+<td>save data to files</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>w</code></td>
+<td>close scene</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>0</code></td>
+<td>show Error Log</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>1</code></td>
+<td>show Application Help</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>2</code></td>
+<td>show Application Settings</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>3</code></td>
+<td>show/hide Python Interactor</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>4</code></td>
+<td>show Extension Manager</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>5</code></td>
+<td>show/hide Module Panel</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>h</code></td>
+<td>open default startup module (configurable in Application Settings)</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="2d-views_1">2D Views<a class="headerlink" href="#2d-views_1" title="Permanent link">&para;</a></h3>
+<p>The following shortcuts are available when a slice view is active. To activate a view, click inside the view: if you do not want to change anything in the view, just activate it then do <code>right-click</code> without moving the mouse. Note that simply hovering over the mouse over a slice view will not activate the view.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>right-click</code> + <code>drag up/down</code></td>
+<td>zoom image in/out</td>
+</tr>
+<tr>
+<td><code>left-click</code> + <code>drag up/down</code></td>
+<td>adjust level of image</td>
+</tr>
+<tr>
+<td><code>left-click</code> + <code>drag left/right</code></td>
+<td>adjust window of image</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>mouse wheel</code></td>
+<td>zoom image in/out</td>
+</tr>
+<tr>
+<td><code>middle-click</code> + <code>drag</code></td>
+<td>pan (translate) view</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>left-click</code> + <code>drag</code></td>
+<td>pan (translate) view</td>
+</tr>
+<tr>
+<td><code>left arrow</code> / <code>right arrow</code></td>
+<td>move to previous/next slice</td>
+</tr>
+<tr>
+<td><code>b</code> / <code>f</code></td>
+<td>move to previous/next slice</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>mouse move</code></td>
+<td>move crosshair in all views</td>
+</tr>
+<tr>
+<td><code>v</code></td>
+<td>toggle slice visibility in 3D view</td>
+</tr>
+<tr>
+<td><code>r</code></td>
+<td>reset zoom and pan to default</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>toggle segmentation or labelmap volume</td>
+</tr>
+<tr>
+<td><code>t</code></td>
+<td>toggle foreground volume visibility</td>
+</tr>
+<tr>
+<td><code>[</code> / <code>]</code></td>
+<td>use previous/next volume as background</td>
+</tr>
+<tr>
+<td><code>{</code> / <code>}</code></td>
+<td>use previous/next volume as foreground</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="3d-views">3D views<a class="headerlink" href="#3d-views" title="Permanent link">&para;</a></h3>
+<p>The following shortcuts are available when a 3D view is active. To activate a view, click inside the view: if you do not want to change anything in the view, just activate it then do <code>right-click</code> without moving the mouse. Note that simply hovering over the mouse over a slice view will not activate the view.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Shift</code> + <code>mouse move</code></td>
+<td>move crosshair in all views</td>
+</tr>
+<tr>
+<td><code>left-click</code> + <code>drag</code></td>
+<td>rotate view</td>
+</tr>
+<tr>
+<td><code>left arrow</code> / <code>right arrow</code></td>
+<td>rotate view</td>
+</tr>
+<tr>
+<td><code>up arrow</code> / <code>down arrow</code></td>
+<td>rotate view</td>
+</tr>
+<tr>
+<td><code>End</code> or <code>Keypad 1</code></td>
+<td>rotate to view from anterior</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>End</code> or <code>Shift</code> + <code>Keypad 1</code></td>
+<td>rotate to view from posterior</td>
+</tr>
+<tr>
+<td><code>Page Down</code> or <code>Keypad 3</code></td>
+<td>rotate to view from left side</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>Page Down</code> or <code>Shift</code> + <code>Keypad 3</code></td>
+<td>rotate to view from right side</td>
+</tr>
+<tr>
+<td><code>Home</code> or <code>Keypad 7</code></td>
+<td>rotate to view from superior</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>Home</code> or <code>Shift</code> + <code>Keypad 7</code></td>
+<td>rotate to view from inferior</td>
+</tr>
+<tr>
+<td><code>right-click</code> + <code>drag up/down</code></td>
+<td>zoom view in/out</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>mouse wheel</code></td>
+<td>zoom view in/out</td>
+</tr>
+<tr>
+<td><code>+</code> / <code>-</code></td>
+<td>zoom view in/out</td>
+</tr>
+<tr>
+<td><code>middle-click</code> + <code>drag</code></td>
+<td>pan (translate) view</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>left-click</code> + <code>drag</code></td>
+<td>pan (translate) view</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>left arrow</code> / <code>Shift</code> + <code>right arrow</code></td>
+<td>pan (translate) view</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>up arrow</code> / <code>Shift</code> + <code>down arrow</code></td>
+<td>pan (translate) view</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>Keypad 2</code> / <code>Shift</code> + <code>Keypad 4</code></td>
+<td>pan (translate) view</td>
+</tr>
+<tr>
+<td><code>Shift</code> + <code>Keypad 6</code> / <code>Shift</code> + <code>Keypad 8</code></td>
+<td>pan (translate) view</td>
+</tr>
+<tr>
+<td><code>Keypad 0</code> or <code>Insert</code></td>
+<td>reset zoom and pan, rotate to nearest standard view</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+  
+    
+  
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+  <!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <div class="md-footer-nav">
+      <nav
+        class="md-footer-nav__inner md-grid"
+        aria-label="Footer"
+      >
+
+        <!-- Link to previous page -->
+        
+          <a
+            href="../installation.html"
+            title="Installation"
+            class="md-footer-nav__link md-footer-nav__link--prev"
+            rel="prev"
+          >
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Installation
+              </div>
+            </div>
+          </a>
+        
+
+        <!-- Link to next page -->
+        
+          <a
+            href="02_saving_data.html"
+            title="Saving Data"
+            class="md-footer-nav__link md-footer-nav__link--next"
+            rel="next"
+          >
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Saving Data
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Greydon Gilmore
+          </div>
+        
+      </div>
+
+      <!-- Social links -->
+      
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+      <script src="../assets/javascripts/vendor.de50e36d.min.js"></script>
+      <script src="../assets/javascripts/bundle.dd72b84b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
