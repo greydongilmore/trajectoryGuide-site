@@ -2,7 +2,7 @@
 template: overrides/main_noedit.html
 ---
 
-<center><img src="img/trajectoryGuide.svg" alt="drawing" style="width:80%;"/></center>
+<center><img src="img/trajectoryGuide.svg" alt="drawing" style="width:30%;"/></center>
 
 <center><em>An open-source software for neurosurgical trajectory planning, visualization, and postoperative assessment</em></center>
 

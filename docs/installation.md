@@ -9,17 +9,15 @@ title: Installation
 
 ### 3D Slicer
 
-- 3D Slicer **(Version 4.11.0 or later)**, Download from the <a href="https://download.slicer.org/" target="_blank">3D Slicer website</a>.
+Install 3D Slicer **Version 4.11.0 (or later)** by downloading it from the <a href="https://download.slicer.org/" target="_blank">3D Slicer website</a>.
 
 ### trajectoryGuide source code
 
-- download the latest version of trajectoryGuide from the <a href="https://github.com/greydongilmore/trajectoryGuide" target="_blank">GitHub repository</a>.
-- unzip the folder and save it somewhere on your system
+Download the **trajectoryGuide** source code from <a href="https://github.com/greydongilmore/trajectoryGuide" target="_blank">GitHub</a>. Unzip the folder and store it somewhere on your system.
 
 ### Template space directory
 
-- you will need to download the template space directory from this <a href="https://drive.google.com/file/d/1qlJXICMB-P0FxyjGA1PvGtsPkfjw5wn6/view?usp=sharing" target="_blank">Google drive folder</a>.
-- you will need to unzip this folder and place it inside the trajectoryGuide directory at the path `resources/ext_libs/space`
+Download the template space files from this <a href="https://drive.google.com/file/d/1qlJXICMB-P0FxyjGA1PvGtsPkfjw5wn6/view?usp=sharing" target="_blank">Google drive folder</a>. Unzip the folder and move it into the trajectoryGuide folder at the location `resources/ext_libs/space`.
 
 ## 3D Slicer setup
 

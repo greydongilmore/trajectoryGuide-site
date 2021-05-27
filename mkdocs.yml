@@ -39,6 +39,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.arithmatex
+  - pymdownx.keys
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -65,4 +66,9 @@ nav:
     - Frame Detection: widgets/04_frame_detection.md
     - Registration: widgets/05_registration.md
     - Anatomical Fiducials: widgets/06_anatomical_fiducials.md
+    - Preoperative Planning: widgets/07_preoperative_planning.md
+    - Intraoperative Planning: widgets/08_intraoperative_planning.md
+    - Postoperative Localization: widgets/09_postoperative_localization.md
+    - Postoperative Programming: widgets/10_postoperative_programming.md
+    - Data View: widgets/11_data_view.md
   - About: about.md
