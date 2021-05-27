@@ -5,7 +5,7 @@ title: Registration
 
 ## Patient Space Registration
 
-All registrations with patient scans will be rigid registrations. With some of the more advanced algorithms you can override this and run non-linear registration but it is strongly discouraged. See the below [**Algorithms**](05_registration.html#algorithm) to learn more about each algorithm and the respective settings.
+&emsp;&emsp;All registrations with patient scans will be rigid registrations. With some of the more advanced algorithms you can override this and run non-linear registration but it is strongly discouraged. See the below [**Algorithms**](05_registration.html#algorithm) to learn more about each algorithm and the respective settings.
 
 <center>
     <figure>
@@ -20,7 +20,7 @@ All registrations with patient scans will be rigid registrations. With some of t
 * **Frame Volume:** the scan that contains the sterotactic frame (either MRI or CT).
 * **Floating volumes:** the scans that will be co-registered to the reference volume. You can un-check any scans you do not want registered, all scans checked in this drop-down box will be registered.
 
-Within the **Reference Volume** drop-down box, select the scan you want to co-register all other scans to (Reference). In the **Frame Volume** drop-down box, select the scan that contains the stereotactic fiducials. In the **Floating Volumes** drop-down box, all other scans (floating) will be checked to indicate they will be registered to the reference. If there are any floating scans you do not want registered, uncheck them.
+&emsp;&emsp;Within the **Reference Volume** drop-down box, select the scan you want to co-register all other scans to (Reference). In the **Frame Volume** drop-down box, select the scan that contains the stereotactic fiducials. In the **Floating Volumes** drop-down box, all other scans (floating) will be checked to indicate they will be registered to the reference. If there are any floating scans you do not want registered, uncheck them.
 
 <center>
     <figure>
@@ -29,7 +29,7 @@ Within the **Reference Volume** drop-down box, select the scan you want to co-re
     </figure>
 </center>
 
-To begin the registration, press the **Run Registration** button. The **Registration Process** box will display updated information during the registration. When the registration is complete, the view will be automatically changed to a compare view.
+&emsp;&emsp;To begin the registration, press the **Run Registration** button. The **Registration Process** box will display updated information during the registration. When the registration is complete, the view will be automatically changed to a compare view.
 
 <center>
     <figure>
@@ -40,7 +40,7 @@ To begin the registration, press the **Run Registration** button. The **Registra
 
 ### Check Registration Results
 
-For each registration you will either select <span style="color:green">**Confirm Registration**</span> or <span style="color:red">**Decline Registration**</span>. If you choose to decline a registration, the registration can be re-run with a different algorithm. To check the registration, it is helpful to use the opacity slider to change the opacity of the foreground scan (floating scan).
+&emsp;&emsp;For each registration you will either select <span style="color:green">**Confirm Registration**</span> or <span style="color:red">**Decline Registration**</span>. If you choose to decline a registration, the registration can be re-run with a different algorithm. To check the registration, it is helpful to use the opacity slider to change the opacity of the foreground scan (floating scan).
 
 <center>
     <figure>
@@ -49,7 +49,7 @@ For each registration you will either select <span style="color:green">**Confirm
     </figure>
 </center>
 
-You can also use the **Layer Reveal** tool to check the registration in more detail. This tool displays a square that contains half the foreground scan and half the background scan.
+&emsp;&emsp;You can also use the **Layer Reveal** tool to check the registration in more detail. This tool displays a square that contains half the foreground scan and half the background scan.
 
 <center>
     <figure>
@@ -58,11 +58,11 @@ You can also use the **Layer Reveal** tool to check the registration in more det
     </figure>
 </center>
 
-When finished checking the registrations, any confirmed registered scans will disappear from the **Floating Volumes** drop-down box, declined scans will still appear in the drop-down box. To re-run the registration, update any settings and press the **Run Registration** button, all previous registration information, for the current floating scans, will be erased.
+&emsp;&emsp;When finished checking the registrations, any confirmed registered scans will disappear from the **Floating Volumes** drop-down box, declined scans will still appear in the drop-down box. To re-run the registration, update any settings and press the **Run Registration** button, all previous registration information, for the current floating scans, will be erased.
 
 ## Algorithms
 
-The default algorithm will be NiftyReg using nearest neighbor interpolation when applying the transform. You are able to change the registration algorithm and parameters according to the following information.
+&emsp;&emsp;The default algorithm will be NiftyReg using nearest neighbor interpolation when applying the transform. You are able to change the registration algorithm and parameters according to the following information.
 
 ### NiftyReg - reg_aladin
 
@@ -96,9 +96,7 @@ For information about this algorithm you can visit <a href="https://fsl.fmrib.ox
 
 ### ANTS - antsRegistration
 
-For information about this algorithm you can visit <a href="https://www.nitrc.org/projects/ants" target="_blank">this page</a>.
-
-This algorithm gives the user more control over each step. The user can specify the "stages" of registration, where a stage consists of a transform and an image metric. Each stage consists of levels with specific values set for iterations, shrink factors, and smoothing sigmas.
+&emsp;&emsp;For information about this algorithm you can visit <a href="https://www.nitrc.org/projects/ants" target="_blank">this page</a>. This algorithm gives the user more control over each step. The user can specify the "stages" of registration, where a stage consists of a transform and an image metric. Each stage consists of levels with specific values set for iterations, shrink factors, and smoothing sigmas.
 
 * **interpolation:** applied only to the output image. Options are: linear, nearest neighbor, bspline, cosinc, hammingsinc  (default nearest neighbor)
 * **metric:** CC,MI,GC   (CC)
@@ -113,9 +111,7 @@ This algorithm gives the user more control over each step. The user can specify 
 
 ## Template Space Registration
 
-Click `Run Registration`. The registration progression will be updated within the `Registration Progress` window. Once registration is completed, you will see the co-registered volumes appear in the floating drop-down box (under `Co-registered Volumes`).
-
-You will now confirm that the registration results by clicking the `Compare Volumes` button. For each registration you will either select `Confirm Registration` or `Decline Registration`. If you choose to decline a registration, you will be able to re-run the registration with a different algorithm.
+&emsp;&emsp;Click `Run Registration`. The registration progression will be updated within the `Registration Progress` window. Once registration is completed, you will see the co-registered volumes appear in the floating drop-down box (under `Co-registered Volumes`). You will now confirm that the registration results by clicking the `Compare Volumes` button. For each registration you will either select `Confirm Registration` or `Decline Registration`. If you choose to decline a registration, you will be able to re-run the registration with a different algorithm.
 
 
 <br>

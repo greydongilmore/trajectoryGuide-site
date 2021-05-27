@@ -8,19 +8,19 @@ template: overrides/main.html
 
 ## Interface Overview
 
-Slicer stores all loaded data in a data repository, called the “scene” (or Slicer scene or MRML scene). Each data set, such as an image volume, surface model, or point set, is represented in the scene as a “node”.
+&emsp;&emsp;Slicer stores all loaded data in a data repository, called the “scene” (or Slicer scene or MRML scene). Each data set, such as an image volume, surface model, or point set, is represented in the scene as a “node”.
 
-Slicer provides a large number “modules”, each implementing a specific set of functions for creating or manipulating data in the scene. Modules typically do not interact with each other directly: they just all operate on the data nodes in the scene. Slicer package contains over 100 built-in modules and additional modules can be installed by using the Extension Manager.
+&emsp;&emsp;Slicer provides a large number “modules”, each implementing a specific set of functions for creating or manipulating data in the scene. Modules typically do not interact with each other directly: they just all operate on the data nodes in the scene. Slicer package contains over 100 built-in modules and additional modules can be installed by using the Extension Manager.
 
 <br><img src="../img/3d_slicer_gui.svg" alt="3d_slicer_gui"/><br><br>
 
 ### 2D Views
 
-Three default slice views are provided (with Red, Yellow and Green colored bars) in which Axial, Saggital, Coronal or Oblique 2D slices of volume images can be displayed. Additional generic slice views have a grey colored bar and an identifying number in their upper left corner.
+&emsp;&emsp;Three default slice views are provided (with Red, Yellow and Green colored bars) in which Axial, Saggital, Coronal or Oblique 2D slices of volume images can be displayed. Additional generic slice views have a grey colored bar and an identifying number in their upper left corner.
 
 <center><img src="../img/2d_slice_view_controls.png" alt="2d_slice_view_controls"/></center>
 
-Slice View Controls: The colored bar across any Slice View shows a pushpin icon on its left. When the mouse rolls over this icon, a panel for configuring the slice view is displayed. The panel is hidden when the mouse moves away. For persistent display of this panel, just click the pushpin icon. For more options, click the double-arrow icon.
+&emsp;&emsp;Slice View Controls: The colored bar across any Slice View shows a pushpin icon on its left. When the mouse rolls over this icon, a panel for configuring the slice view is displayed. The panel is hidden when the mouse moves away. For persistent display of this panel, just click the pushpin icon. For more options, click the double-arrow icon.
 
 View Controllers module provides an alternate way of displaying these controllers in the Module Panel.
 
@@ -38,9 +38,7 @@ View Controllers module provides an alternate way of displaying these controller
 
 ### 3D View
 
-Displays a rendered 3D view of the scene along with visual references to specify orientation and scale.
-
-Default orientation axes:
+Displays a rendered 3D view of the scene along with visual references to specify orientation and scale. Default orientation axes:
 
 - A = anterior; P = posterior
 - R = right; L = left
@@ -48,7 +46,7 @@ Default orientation axes:
 
 <center><img src="../img/3d_slice_view_controls.png" alt="3d_slice_view_controls"/></center>
 
-3D View Controls: The blue bar across any 3D View shows a pushpin icon on its left. When the mouse rolls over this icon, a panel for configuring the 3D View is displayed. The panel is hidden when the mouse moves away. For persistent display of this panel, just click the pushpin icon.
+**3D View Controls:** The blue bar across any 3D View shows a pushpin icon on its left. When the mouse rolls over this icon, a panel for configuring the 3D View is displayed. The panel is hidden when the mouse moves away. For persistent display of this panel, just click the pushpin icon.
 
 ## Mouse & Keyboard Shortcuts
 
@@ -80,7 +78,7 @@ The following summary of shortcuts is taken from the <a href="https://slicer.rea
 
 ### 2D Views
 
-The following shortcuts are available when a slice view is active. To activate a view, click inside the view: if you do not want to change anything in the view, just activate it then do `right-click` without moving the mouse. Note that simply hovering over the mouse over a slice view will not activate the view.
+&emsp;&emsp;The following shortcuts are available when a slice view is active. To activate a view, click inside the view: if you do not want to change anything in the view, just activate it then do `right-click` without moving the mouse. Note that simply hovering over the mouse over a slice view will not activate the view.
 
 <center>
 
@@ -106,7 +104,7 @@ The following shortcuts are available when a slice view is active. To activate a
 
 ### 3D views
 
-The following shortcuts are available when a 3D view is active. To activate a view, click inside the view: if you do not want to change anything in the view, just activate it then do `right-click` without moving the mouse. Note that simply hovering over the mouse over a slice view will not activate the view.
+&emsp;&emsp;The following shortcuts are available when a 3D view is active. To activate a view, click inside the view: if you do not want to change anything in the view, just activate it then do `right-click` without moving the mouse. Note that simply hovering over the mouse over a slice view will not activate the view.
 
 <center>
 

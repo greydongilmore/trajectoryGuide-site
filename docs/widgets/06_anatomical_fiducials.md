@@ -11,9 +11,9 @@ title: Registration
 
 ## Placing Fiducials
 
-The midline plane will need to be determined, which relies on four points: the anterior commissure (AC), the posterior commissure (PC), and two midline points (Mid1-2). The midline points should be at least one interhemispheric point and one brainstem point (see section below for landmark positions). These 4 points are then used to define the midline plane, which is used to define the Talaraich coordinate system.
+&emsp;&emsp;The midline plane will need to be determined, which relies on four points: the anterior commissure (AC), the posterior commissure (PC), and two midline points (Mid 1-2). The midline points should be at least one interhemispheric point and one brainstem point (see section below for landmark positions). These 4 points are then used to define the midline plane, which is used to define the Talaraich coordinate system.
 
-To place a fiducial point, click on the place point button (<img src="img/MarkupsFiducialMouseModePlace.png" alt="MarkupsFiducialMouseModePlace"/>) and drop the point at the indicated landmark. Once you have placed AC, PC and at least 2 midlines, clikc **Confirm Fiducials**. A new entry will be added to the fiducial table for the point `MCP`.
+&emsp;&emsp;To place a fiducial point, click on the place point button (<img src="img/MarkupsFiducialMouseModePlace.png" alt="MarkupsFiducialMouseModePlace"/>) and drop the point at the indicated landmark. Once you have placed AC, PC and at least 2 midlines, click **Confirm Fiducials**. A new entry will be added to the fiducial table for the point `MCP`.
 
 <center>
     <figure>

@@ -52,6 +52,7 @@ plugins:
   - search
 
 extra_javascript:
+  - javascripts/config.js
   - https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js
 
 nav:

@@ -11,7 +11,7 @@ title: Frame Detection
 
 ## Automatic frame detection
 
-Automatic frame detection will work for CT and MRI. From the drop-down menu, next to `Fiducial Volume`, select the volume containing the stereotactic frame. Choose the stereotactic frame that is captured in the CT volume and press `Detect Frame Fiducials`. 
+&emsp;&emsp;Automatic frame detection will work for CT and MRI. From the drop-down menu, next to `Fiducial Volume`, select the volume containing the stereotactic frame. Choose the stereotactic frame that is captured in the CT volume and press `Detect Frame Fiducials`. 
 
 <center>
     <figure>
@@ -27,11 +27,11 @@ If the automatic detection was successful you will see an image like this:
         <img src="img/detected_fiducials.png" alt="frame_fiducials"/>
         <figcaption>Frame fiducials with frame registration errors.</figcaption>
     </figure>
-</center><br>
+</center>
 
-Scroll up/down the slices to check the accuracy of the frame detection. The displayed numbers are the fiducial registration errors, lower values indicate a more accurate registration. Values lower than 0.5mm appear in <span style="color:green">**Green**</span>, while values above 0.5mm appear in <span style="color:red">**Red**</span>. On the left-hand side you will see the overall frame registration error (anything below 0.5 mm should be acceptable).
+&emsp;&emsp;Scroll up/down the slices to check the accuracy of the frame detection. The displayed numbers are the fiducial registration errors, lower values indicate a more accurate registration. Values lower than 0.5mm appear in <span style="color:green">**Green**</span>, while values above 0.5mm appear in <span style="color:red">**Red**</span>. On the left-hand side you will see the overall frame registration error (anything below 0.5 mm should be acceptable).
 
-If you are satisfied with the results, select **Confirm Frame Fiducials**. If you are not satisfied, you can try adjusting frame registration settings and re-run autodection (see ensuing section).
+&emsp;&emsp;If you are satisfied with the results, select **Confirm Frame Fiducials**. If you are not satisfied, you can try adjusting frame registration settings and re-run autodection (see ensuing section).
 
 ## Adjust frame registration settings
 
@@ -54,7 +54,7 @@ You can modify the default frame registration settings by clicking the **Advance
 
 ### Troubleshooting automatic frame detection
 
-The first parameter to adjust would be **Match Centroids**, select **Yes**. A pop-up message will appear asking if you want to overwrite the previous frame registration data, select **Yes**:
+&emsp;&emsp;The first parameter to adjust would be **Match Centroids**, select **Yes**. A pop-up message will appear asking if you want to overwrite the previous frame registration data, select **Yes**:
 
 <center>
     <figure>
@@ -63,13 +63,11 @@ The first parameter to adjust would be **Match Centroids**, select **Yes**. A po
     </figure>
 </center>
 
-If you are still not happy with the registration, try increasing the number of iterations to 200 and re-run. The other parameter you can adjust is the number of iterations, increasing the value to 300. You may also want to try decreasing the radius of the target by 0.1 mm.
-
-The last choice would be to adjust the transform type, however this will introduce some non-linearity into the registration.
+&emsp;&emsp;If you are still not happy with the registration, try increasing the number of iterations to 200 and re-run. The other parameter you can adjust is the number of iterations, increasing the value to 300. You may also want to try decreasing the radius of the target by 0.1 mm. The last choice would be to adjust the transform type, however this will introduce some non-linearity into the registration.
 
 ## Manual frame detection
 
-To run manual frame detection select the button **Manual Detection**. You will need to identify each frame fiducial one-by-one on the same axial slice. If you are unsure of how the stereotactic frame fiducials are numbered you can press `Frame Fiducial Legend` to see the mapping. All point fiducials will need to be placed on the same axial slice. When you are finished, press **Confirm Frame Fiducials**.
+&emsp;&emsp;To run manual frame detection select the button **Manual Detection**. You will need to identify each frame fiducial one-by-one on the same axial slice. If you are unsure of how the stereotactic frame fiducials are numbered you can press `Frame Fiducial Legend` to see the mapping. All point fiducials will need to be placed on the same axial slice. When you are finished, press **Confirm Frame Fiducials**.
 
 <br><p align="center"><img src="img/manual_frame_dection.png" alt="manual_frame_dection" width="30%"/></p><br>
 
