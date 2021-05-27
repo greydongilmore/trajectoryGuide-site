@@ -367,12 +367,19 @@
     Automatic frame detection
   </a>
   
-    <nav class="md-nav" aria-label="Automatic frame detection">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjust-frame-registration-settings" class="md-nav__link">
+    Adjust frame registration settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjust frame registration settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adjust-frame-registration-settings" class="md-nav__link">
-    Adjust frame registration settings
+  <a href="#troubleshooting-automatic-frame-detection" class="md-nav__link">
+    Troubleshooting automatic frame detection
   </a>
   
 </li>
@@ -390,9 +397,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#leksell-frame-system" class="md-nav__link">
-    Leksell frame system
+  <a href="#supported-frame-systems" class="md-nav__link">
+    Supported Frame Systems
   </a>
+  
+    <nav class="md-nav" aria-label="Supported Frame Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leksell-frame" class="md-nav__link">
+    Leksell frame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -423,6 +443,66 @@
   <li class="md-nav__item">
     <a href="06_anatomical_fiducials.html" title="Anatomical Fiducials" class="md-nav__link">
       Anatomical Fiducials
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="07_preoperative_planning.html" title="Preoperative Planning" class="md-nav__link">
+      Preoperative Planning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="08_intraoperative_planning.html" title="Intraoperative Planning" class="md-nav__link">
+      Intraoperative Planning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="09_postoperative_localization.html" title="Postoperative Localization" class="md-nav__link">
+      Postoperative Localization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="10_postoperative_programming.html" title="Postoperative Programming" class="md-nav__link">
+      Postoperative Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="11_data_view.html" title="Data View" class="md-nav__link">
+      Data View
     </a>
   </li>
 
@@ -472,12 +552,19 @@
     Automatic frame detection
   </a>
   
-    <nav class="md-nav" aria-label="Automatic frame detection">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjust-frame-registration-settings" class="md-nav__link">
+    Adjust frame registration settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjust frame registration settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adjust-frame-registration-settings" class="md-nav__link">
-    Adjust frame registration settings
+  <a href="#troubleshooting-automatic-frame-detection" class="md-nav__link">
+    Troubleshooting automatic frame detection
   </a>
   
 </li>
@@ -495,9 +582,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#leksell-frame-system" class="md-nav__link">
-    Leksell frame system
+  <a href="#supported-frame-systems" class="md-nav__link">
+    Supported Frame Systems
   </a>
+  
+    <nav class="md-nav" aria-label="Supported Frame Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leksell-frame" class="md-nav__link">
+    Leksell frame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -550,7 +650,7 @@
 </center><br></p>
 <p>Scroll up/down the slices to check the accuracy of the frame detection. The displayed numbers are the fiducial registration errors, lower values indicate a more accurate registration. Values lower than 0.5mm appear in <span style="color:green"><strong>Green</strong></span>, while values above 0.5mm appear in <span style="color:red"><strong>Red</strong></span>. On the left-hand side you will see the overall frame registration error (anything below 0.5 mm should be acceptable).</p>
 <p>If you are satisfied with the results, select <strong>Confirm Frame Fiducials</strong>. If you are not satisfied, you can try adjusting frame registration settings and re-run autodection (see ensuing section).</p>
-<h3 id="adjust-frame-registration-settings">Adjust frame registration settings<a class="headerlink" href="#adjust-frame-registration-settings" title="Permanent link">&para;</a></h3>
+<h2 id="adjust-frame-registration-settings">Adjust frame registration settings<a class="headerlink" href="#adjust-frame-registration-settings" title="Permanent link">&para;</a></h2>
 <p>You can modify the default frame registration settings by clicking the <strong>Advanced Settings</strong> box in the frame detection widget.</p>
 <p><center>
     <figure>
@@ -561,21 +661,27 @@
 <ul>
 <li><strong>Transform type (default: Rigidbody):</strong> Rigidbody, Similarity, Affine.</li>
 <li><strong>Iterations (default: 100):</strong> Set the maximum number of iterations.</li>
-<li><strong>Max Landmarks (default: 200):</strong> Set the maximum number of frame fiducials to use, each slice in the CT scan contains a set of fiducial points. For instance, if a CT scan is acquired with 124 slices, using a Leksell frame, there would be ~600 fiducial points.</li>
+<li><strong>Max Landmarks (default: 200):</strong> Set the maximum number of frame fiducials to use, each slice in the CT scan contains a set of fiducial points. For instance, if a CT scan is acquired with 124 slices, using a Leksell frame, there would be ~ 600 fiducial points.</li>
 <li><strong>Match Centroids (default: No):</strong> Starts the process by translating source centroid to target centroid.</li>
+<li><strong>Reverse Source/Target (default: No):</strong> Will invert the transform so the source is fixed and the target is floating. This is helpful if the target has fewer data samples than the source.</li>
+<li><strong>Target Point Radius (default: 0.5 mm):</strong> Radius to use for the target frame fiducials.</li>
+<li><strong>Mean Distance Measure (Default: RMS):</strong> metric to use when measuring the point registration error.</li>
 </ul>
-<p>The first parameter to adjust would be <strong>Match Centroids</strong>, select <strong>Yes</strong> and would will see a pop-up message asking if you want to overwrite the previous frame registration data, select <strong>Yes</strong>:</p>
+<h3 id="troubleshooting-automatic-frame-detection">Troubleshooting automatic frame detection<a class="headerlink" href="#troubleshooting-automatic-frame-detection" title="Permanent link">&para;</a></h3>
+<p>The first parameter to adjust would be <strong>Match Centroids</strong>, select <strong>Yes</strong>. A pop-up message will appear asking if you want to overwrite the previous frame registration data, select <strong>Yes</strong>:</p>
 <p><center>
     <figure>
         <img src="img/frame_detection_message.png" alt="frame_detection_message"/>
         <figcaption>Frame detection pop-up message.</figcaption>
     </figure>
 </center></p>
-<p>If you are still not happy with the registration, try increasing the number of iterations to 200 and re-run. The other parameter you can adjust is the number of iterations, increasing the value to 300. The last choice would be to adjust the transform type, however this will introduce some non-linearity into the registration.</p>
+<p>If you are still not happy with the registration, try increasing the number of iterations to 200 and re-run. The other parameter you can adjust is the number of iterations, increasing the value to 300. You may also want to try decreasing the radius of the target by 0.1 mm.</p>
+<p>The last choice would be to adjust the transform type, however this will introduce some non-linearity into the registration.</p>
 <h2 id="manual-frame-detection">Manual frame detection<a class="headerlink" href="#manual-frame-detection" title="Permanent link">&para;</a></h2>
 <p>To run manual frame detection select the button <strong>Manual Detection</strong>. You will need to identify each frame fiducial one-by-one on the same axial slice. If you are unsure of how the stereotactic frame fiducials are numbered you can press <code>Frame Fiducial Legend</code> to see the mapping. All point fiducials will need to be placed on the same axial slice. When you are finished, press <strong>Confirm Frame Fiducials</strong>.</p>
 <p><br><p align="center"><img src="img/manual_frame_dection.png" alt="manual_frame_dection" width="30%"/></p><br></p>
-<h2 id="leksell-frame-system">Leksell frame system<a class="headerlink" href="#leksell-frame-system" title="Permanent link">&para;</a></h2>
+<h2 id="supported-frame-systems">Supported Frame Systems<a class="headerlink" href="#supported-frame-systems" title="Permanent link">&para;</a></h2>
+<h3 id="leksell-frame">Leksell frame<a class="headerlink" href="#leksell-frame" title="Permanent link">&para;</a></h3>
 <p><br><p align="center"><img src="img/leksell_drawing.svg" alt="leksell_drawing" width="70%"/></p><br></p>
 <p><br>
 <br>
