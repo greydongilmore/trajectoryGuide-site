@@ -35,7 +35,7 @@ Developed by Johannes A. Koeppen and based on **Ogle** written by Dr. Michael J 
 
 Developed by Medtronic. More information can be found on their <a href="https://www.medtronic.com/ca-en/healthcare-professionals/products/neurological/surgical-navigation-systems/stealthstation/stealthstation-s8.html" target="_blank">website</a>.
 
-#### neuroinspire
+#### Neuroinspire
 
 Developed by Renishaw. More information can be found on their <a href="https://www.renishaw.com/en/neuroinspire-neurosurgical-planning-software--8244" target="_blank">website</a>.
 
@@ -46,6 +46,10 @@ Developed by Brainlab. More information can be found on their <a href="https://w
 #### Inomed Planning System
 
 Developed by Inomed. More information can be found on their <a href="https://www.en.inomed.com/products/functional-neurosurgery/ips/" target="_blank">website</a>.
+
+#### WayPoint Navigator 
+
+Distributed by FHC. More information can be found on their <a href="http://navigator.fh-co.com/" target="_blank">website</a>.
 
 #### MNPS
 
