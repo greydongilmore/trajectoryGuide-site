@@ -43,9 +43,8 @@ Download the template space files from this <a href="https://drive.google.com/fi
 
 3. Copy and paste the command below into the Python interactor box, press `Enter` to run the command.
 
-    ```console
+    ```
     pip_install('scikit-image pandas scipy shapely')
-
     ```
 
 ### Add trajectoryGuide module

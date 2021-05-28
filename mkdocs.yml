@@ -3,8 +3,8 @@ site_author: Greydon Gilmore
 
 # Repository
 repo_name: GitHub
-repo_url: https://github.com/trajectoryGuide/trajectoryGuide-site
-edit_uri: https://github.com/trajectoryGuide/trajectoryGuide-site/blob/master/docs
+repo_url: https://github.com/greydongilmore/trajectoryGuide-site
+edit_uri: https://github.com/greydongilmore/trajectoryGuide-site/blob/master/docs
 
 # Copyright
 copyright: Copyright &copy; 2021 Greydon Gilmore

@@ -69,14 +69,23 @@ You can modify the default frame registration settings by clicking the **Advance
 
 &emsp;&emsp;To run manual frame detection select the button **Manual Detection**. You will need to identify each frame fiducial one-by-one on the same axial slice. If you are unsure of how the stereotactic frame fiducials are numbered you can press `Frame Fiducial Legend` to see the mapping. All point fiducials will need to be placed on the same axial slice. When you are finished, press **Confirm Frame Fiducials**.
 
-<br><p align="center"><img src="img/manual_frame_dection.png" alt="manual_frame_dection" width="30%"/></p><br>
+<center>
+    <figure>
+        <img src="img/manual_frame_dection.png" alt="manual_frame_dection" width="40%"/>
+        <figcaption>Manual frame detection fiducials.</figcaption>
+    </figure>
+</center>
 
 ## Supported Frame Systems
 
 ### Leksell frame
 
-<br><p align="center"><img src="img/leksell_drawing.svg" alt="leksell_drawing" width="70%"/></p><br>
-
+<center>
+    <figure>
+        <img src="img/leksell_drawing.png" alt="leksell_drawing" width="70%"/>
+        <figcaption>Leksell stereotactic system.</figcaption>
+    </figure>
+</center>
 
 <br>
 <br>
