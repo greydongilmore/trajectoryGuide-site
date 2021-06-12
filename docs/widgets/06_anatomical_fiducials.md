@@ -17,9 +17,9 @@ title: Registration
 
 <center>
     <figure>
-    <img src="img/fiducial_table.png" alt="fiducial_table"  hspace="25" vspace="40"/>
-    <a style="font-size: 36px;">&rarr;</a>
-    <img src="img/fiducial_table_mcp.png" alt="fiducial_table" hspace="25"/>
+        <img src="img/fiducial_table.png" alt="fiducial_table"  hspace="25" vspace="40"/>
+        <a style="font-size: 36px;">&rarr;</a>
+        <img src="img/fiducial_table_mcp.png" alt="fiducial_table" hspace="25"/>
     </figure>
 </center><br>
 

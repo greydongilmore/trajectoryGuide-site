@@ -78,14 +78,35 @@ You can modify the default frame registration settings by clicking the **Advance
 
 ## Supported Frame Systems
 
-### Leksell frame
+### Leksell frame localizer
 
 <center>
     <figure>
-        <img src="img/leksell_drawing.png" alt="leksell_drawing" width="70%"/>
+        <img src="img/leksell_frame_white.png" alt="leksell_frame" />
         <figcaption>Leksell stereotactic system.</figcaption>
     </figure>
 </center>
+
+
+### BRW frame localizer
+
+<center>
+    <figure>
+        <img src="img/brw_frame_white.png" alt="brw_frame" />
+        <figcaption>BRW stereotactic system.</figcaption>
+    </figure>
+</center>
+
+
+### CRW frame
+
+<center>
+    <figure>
+        <img src="img/crw_frame_white.png" alt="crw_frame" />
+        <figcaption>CRW stereotactic system.</figcaption>
+    </figure>
+</center>
+
 
 <br>
 <br>
