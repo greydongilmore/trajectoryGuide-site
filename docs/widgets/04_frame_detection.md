@@ -107,6 +107,40 @@ You can modify the default frame registration settings by clicking the **Advance
     </figure>
 </center>
 
+## Automatic frame detection algorithm
+
+&emsp;&emsp;The automatic frame detection algorithm first employs an intensity threshold to identify pixel clusters that may belong to an N-localizer. After the entire image volume is scanned, the identified clusters are either accepted or rejected based on the stereotactic frame geometry. The intensity threshold is a binary threshold that results in pixel values less than a specified intensity value to be removed (i.e. brain tissue will be removed). For the Leksell and CRW frame systems, a morphological erosion step is applied to the threshold image followed by a morphological dilation. Erosion of a binary image sharpens the boundaries of foreground pixels, which will act to make features in the image volume “thinner”. The resulting image will contain frame and skull artifact but the frame fiducial markers will no longer be present. To finalize the image mask, a morphological dilation step is applied to the eroded image to enlarge the remaining structures in the image. Since the frame fiducial markers were removed with the erosion step, the objects being enlarged are left-over artifact to be removed - which forms the final image mask. The image mask is inverted and intersected with the threshold image to recover the fiducial markers.
+
+&emsp;&emsp;The resulting masked image is processed further to obtain connected components (i.e. neighbouring pixels that share the same value). As long as neighbouring pixels share the same value, they will be labelled as a single region. All connected regions are assigned the same integer value to form clusters of connected pixels. Since the dimensions of the N-localizer are known the expected pixel cluster size can be estimated.
+
+### Leksell localization sample
+
+<center>
+    <figure>
+        <img src="img/leksellg_segmentation.png" alt="leksell_frame" />
+        <figcaption>Leksell fiducial segmentation sample.</figcaption>
+    </figure>
+</center>
+
+
+### BRW localization sample
+
+<center>
+    <figure>
+        <img src="img/brw_segmentation.png" alt="brw_frame" />
+        <figcaption>BRW fiducial segmentation sample.</figcaption>
+    </figure>
+</center>
+
+
+### CRW localization sample
+
+<center>
+    <figure>
+        <img src="img/crw_segmentation.png" alt="crw_frame" />
+        <figcaption>CRW fiducial segmentation sample.</figcaption>
+    </figure>
+</center>
 
 <br>
 <br>

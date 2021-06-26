@@ -430,6 +430,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#automatic-frame-detection-algorithm" class="md-nav__link">
+    Automatic frame detection algorithm
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatic frame detection algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leksell-localization-sample" class="md-nav__link">
+    Leksell localization sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brw-localization-sample" class="md-nav__link">
+    BRW localization sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crw-localization-sample" class="md-nav__link">
+    CRW localization sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -629,6 +663,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#automatic-frame-detection-algorithm" class="md-nav__link">
+    Automatic frame detection algorithm
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatic frame detection algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leksell-localization-sample" class="md-nav__link">
+    Leksell localization sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brw-localization-sample" class="md-nav__link">
+    BRW localization sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crw-localization-sample" class="md-nav__link">
+    CRW localization sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -732,6 +800,30 @@
     <figure>
         <img src="img/crw_frame_white.png" alt="crw_frame" />
         <figcaption>CRW stereotactic system.</figcaption>
+    </figure>
+</center></p>
+<h2 id="automatic-frame-detection-algorithm">Automatic frame detection algorithm<a class="headerlink" href="#automatic-frame-detection-algorithm" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;The automatic frame detection algorithm first employs an intensity threshold to identify pixel clusters that may belong to an N-localizer. After the entire image volume is scanned, the identified clusters are either accepted or rejected based on the stereotactic frame geometry. The intensity threshold is a binary threshold that results in pixel values less than a specified intensity value to be removed (i.e. brain tissue will be removed). For the Leksell and CRW frame systems, a morphological erosion step is applied to the threshold image followed by a morphological dilation. Erosion of a binary image sharpens the boundaries of foreground pixels, which will act to make features in the image volume “thinner”. The resulting image will contain frame and skull artifact but the frame fiducial markers will no longer be present. To finalize the image mask, a morphological dilation step is applied to the eroded image to enlarge the remaining structures in the image. Since the frame fiducial markers were removed with the erosion step, the objects being enlarged are left-over artifact to be removed - which forms the final image mask. The image mask is inverted and intersected with the threshold image to recover the fiducial markers.</p>
+<p>&emsp;&emsp;The resulting masked image is processed further to obtain connected components (i.e. neighbouring pixels that share the same value). As long as neighbouring pixels share the same value, they will be labelled as a single region. All connected regions are assigned the same integer value to form clusters of connected pixels. Since the dimensions of the N-localizer are known the expected pixel cluster size can be estimated.</p>
+<h3 id="leksell-localization-sample">Leksell localization sample<a class="headerlink" href="#leksell-localization-sample" title="Permanent link">&para;</a></h3>
+<p><center>
+    <figure>
+        <img src="img/leksellg_segmentation.png" alt="leksell_frame" />
+        <figcaption>Leksell fiducial segmentation sample.</figcaption>
+    </figure>
+</center></p>
+<h3 id="brw-localization-sample">BRW localization sample<a class="headerlink" href="#brw-localization-sample" title="Permanent link">&para;</a></h3>
+<p><center>
+    <figure>
+        <img src="img/brw_segmentation.png" alt="brw_frame" />
+        <figcaption>BRW fiducial segmentation sample.</figcaption>
+    </figure>
+</center></p>
+<h3 id="crw-localization-sample">CRW localization sample<a class="headerlink" href="#crw-localization-sample" title="Permanent link">&para;</a></h3>
+<p><center>
+    <figure>
+        <img src="img/crw_segmentation.png" alt="crw_frame" />
+        <figcaption>CRW fiducial segmentation sample.</figcaption>
     </figure>
 </center></p>
 <p><br>
