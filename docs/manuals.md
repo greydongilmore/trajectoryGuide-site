@@ -81,8 +81,9 @@ title: Product Manuals
 
 ## MRI
 
-* <a href="static/lhsc_dbs_mri_protocol_pre.pdf" target="_blank">LHSC pre-op MRI sequences</a>
-* <a href="static/lhsc_dbs_mri_protocol_post.pdf" target="_blank">LHSC post-op MRI sequences</a>
+* <a href="static/lhsc_dbs_mri_protocol_pre_2021.pdf" target="_blank">2021 LHSC pre-op MRI sequences - DBS</a>
+* <a href="static/lhsc_dbs_mri_protocol_pre_2018.pdf" target="_blank">2018 LHSC pre-op MRI sequences - DBS</a>
+* <a href="static/lhsc_dbs_mri_protocol_post.pdf" target="_blank">2018 LHSC post-op MRI sequences - DBS</a>
 
 
 <br>
