@@ -52,6 +52,10 @@ title: Product Manuals
 ### Brainlab
 
 * <a href="static/brainab_elements_trajectory_planning_v2.5.pdf" target="_blank">Brainab Elements Trajectory Planning v2.5</a>
+* <a href="static/brainab_cranial_navigation_system_v1.4.pdf" target="_blank">Brainab Cranial Navigation System v1.4</a>
+* <a href="static/brainlab_automatic_registration_v2.5.pdf" target="_blank">Brainab Automatic Registration v2.5</a>
+* <a href="static/brainlab_lead_localization_v1.1.pdf" target="_blank">Brainab Lead Localization v1.1</a>
+* <a href="static/brainlab_iplan_stereotaxy_v3.0.pdf" target="_blank">Brainab iPlan Stereotaxy v3.0</a>
 
 ### FHC
 
