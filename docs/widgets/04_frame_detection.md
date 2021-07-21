@@ -82,7 +82,7 @@ You can modify the default frame registration settings by clicking the **Advance
 
 <center>
     <figure>
-        <img src="img/leksell_frame_white.png" alt="leksell_frame" />
+        <img src="img/04_frame_detection/leksell_frame_white.png" alt="leksell_frame" />
         <figcaption>Leksell stereotactic system.</figcaption>
     </figure>
 </center>
@@ -92,7 +92,7 @@ You can modify the default frame registration settings by clicking the **Advance
 
 <center>
     <figure>
-        <img src="img/brw_frame_white.png" alt="brw_frame" />
+        <img src="img/04_frame_detection/brw_frame_white.png" alt="brw_frame" />
         <figcaption>BRW stereotactic system.</figcaption>
     </figure>
 </center>
@@ -102,7 +102,7 @@ You can modify the default frame registration settings by clicking the **Advance
 
 <center>
     <figure>
-        <img src="img/crw_frame_white.png" alt="crw_frame" />
+        <img src="img/04_frame_detection/crw_frame_white.png" alt="crw_frame" />
         <figcaption>CRW stereotactic system.</figcaption>
     </figure>
 </center>
@@ -117,8 +117,13 @@ You can modify the default frame registration settings by clicking the **Advance
 
 <center>
     <figure>
-        <img src="img/leksellg_segmentation.png" alt="leksell_frame" />
-        <figcaption>Leksell fiducial segmentation sample.</figcaption>
+        <img src="img/04_frame_detection/leksell_ct_segmentation.png" alt="leksell_frame" />
+    </figure>
+</center>
+
+<center>
+    <figure>
+        <img src="img/04_frame_detection/leksell_ct_clusters.png" alt="leksell_frame" width="70%"/>
     </figure>
 </center>
 
@@ -127,18 +132,27 @@ You can modify the default frame registration settings by clicking the **Advance
 
 <center>
     <figure>
-        <img src="img/brw_segmentation.png" alt="brw_frame" />
-        <figcaption>BRW fiducial segmentation sample.</figcaption>
+        <img src="img/04_frame_detection/brw_ct_segmentation.png" alt="brw_frame" />
     </figure>
 </center>
 
+<center>
+    <figure>
+        <img src="img/04_frame_detection/brw_ct_clusters.png" alt="brw_frame" width="70%"/>
+    </figure>
+</center>
 
 ### CRW localization sample
 
 <center>
     <figure>
-        <img src="img/crw_segmentation.png" alt="crw_frame" />
-        <figcaption>CRW fiducial segmentation sample.</figcaption>
+        <img src="img/04_frame_detection/crw_ct_segmentation.png" alt="crw_frame" />
+    </figure>
+</center>
+
+<center>
+    <figure>
+        <img src="img/04_frame_detection/crw_ct_clusters.png" alt="crw_frame" width="70%"/>
     </figure>
 </center>
 
