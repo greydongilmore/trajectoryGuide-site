@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#volume-of-activated-tissue" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -404,6 +409,8 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
     <a href="10_postoperative_programming.html" title="Postoperative Programming" class="md-nav__link md-nav__link--active">
       Postoperative Programming
@@ -435,6 +442,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../manuals.html" title="Product Manuals" class="md-nav__link">
+      Product Manuals
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../about.html" title="About" class="md-nav__link">
       About
     </a>
@@ -447,6 +466,21 @@
                 </div>
               </div>
             
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           <div class="md-content">
@@ -464,9 +498,19 @@
     
   
   
-    <h1>Postoperative Programming</h1>
-  
-  
+  <h1 id="volume-of-activated-tissue">Volume of activated tissue<a class="headerlink" href="#volume-of-activated-tissue" title="Permanent link">&para;</a></h1>
+<p>The volume of activated tissue (VAT) also referred to as the volume of tissue activated (VTA) is a model the predicts the extent and location of neural activation produced by stimulation. In trajectoryGuide, the model proposed by Dembek et al. (2017) has been utilized since it does not require image processing to be conducted prior to VAT computation <sup>1</sup>. The calculation of the stimulation field radius based on the DBS stimulation parameters is described the following equation:</p>
+<div class="arithmatex">\[
+r=\left ( \frac{pw}{90 \mu s} \right )*\sqrt{0.72\frac{Vm}{A}*\frac{I}{165 V/m}}
+\]</div>
+<p>&emsp;&emsp;where <em>pw</em> is the pulse width (microseconds), <em>A</em> is the amplitude of stimulation (voltage or milliamperes), and <em>I</em> is the impedance (Ohms) of the electrode contact being used for stimulation. The value <em>0.72 Vm</em> is a constant validated by Dembek et al. (2017) in a previous study <sup>1</sup>. A more complex stimulation field model will eventually be incorporated into trajectoryGuide that can handle bipolar stimulation. For now, only a monopolar stimulation model can be generated. To generate the VAT models in trajectoryGuide, the user needs to input the stimulation parameters including the active contact, stimulation amplitude, frequency, pulse width, and impedance</p>
+<p><center>
+    <figure>
+        <img src="img/10_post_programming/post_programming.png" alt="post_programming" />
+        <figcaption>The postop volume of activated tissue module.</figcaption>
+    </figure>
+</center></p>
+<p><sup>1</sup> T. A. Dembek et al., “Probabilistic mapping of deep brain stimulation effects in essential tremor.,” NeuroImage Clin., vol. 13, pp. 164–173, 2017, doi: 10.1016/j.nicl.2016.11.019</p>
   
     
   
@@ -600,6 +644,10 @@
         <script src="../javascripts/config.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
