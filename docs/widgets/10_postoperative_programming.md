@@ -15,7 +15,7 @@ $$
 
 <center>
     <figure>
-        <img src="img/10_post_programming/post_programming.png" alt="post_programming" />
+    	<a href="img/10_post_programming/post_programming.png" target="_blank" alt="post_programming" >![](img/10_post_programming/post_programming.png)</a>
         <figcaption>The postop volume of activated tissue module.</figcaption>
     </figure>
 </center>

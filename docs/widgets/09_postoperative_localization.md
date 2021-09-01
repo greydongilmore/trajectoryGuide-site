@@ -11,7 +11,7 @@ For now, electrode localization in trajectoryGuide is achieved by manually defin
 
 <center>
     <figure>
-        <img src="img/09_postop_localization/postop_localization_2.png" alt="postop_planning" />
+        <a href="img/09_postop_localization/postop_localization_2.png" target="_blank" alt="post_localization" >![](img/09_postop_localization/postop_localization_2.png)</a>
         <figcaption>The postop localization module.</figcaption>
     </figure>
 </center>

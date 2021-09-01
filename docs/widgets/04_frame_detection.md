@@ -82,7 +82,7 @@ You can modify the default frame registration settings by clicking the **Advance
 
 <center>
     <figure>
-        <img src="img/04_frame_detection/leksell_frame_white.png" alt="leksell_frame" />
+        <a href="img/04_frame_detection/leksell_frame_white.png" target="_blank" alt="leksell_frame" >![](img/04_frame_detection/leksell_frame_white.png)</a>
         <figcaption>Leksell stereotactic system.</figcaption>
     </figure>
 </center>
@@ -92,7 +92,7 @@ You can modify the default frame registration settings by clicking the **Advance
 
 <center>
     <figure>
-        <img src="img/04_frame_detection/brw_frame_white.png" alt="brw_frame" />
+        <a href="img/04_frame_detection/brw_frame_white.png" target="_blank" alt="brw_frame" >![](img/04_frame_detection/brw_frame_white.png)</a>
         <figcaption>BRW stereotactic system.</figcaption>
     </figure>
 </center>
@@ -102,7 +102,7 @@ You can modify the default frame registration settings by clicking the **Advance
 
 <center>
     <figure>
-        <img src="img/04_frame_detection/crw_frame_white.png" alt="crw_frame" />
+        <a href="img/04_frame_detection/crw_frame_white.png" target="_blank" alt="crw_frame" >![](img/04_frame_detection/crw_frame_white.png)</a>
         <figcaption>CRW stereotactic system.</figcaption>
     </figure>
 </center>
