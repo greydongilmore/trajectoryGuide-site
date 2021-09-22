@@ -17,7 +17,7 @@ Download the **trajectoryGuide** source code from <a href="https://github.com/gr
 
 ### Template space directory
 
-Download the template space files from this <a href="https://github.com/greydongilmore/trajectoryGuideModules/archive/refs/tags/space.zip" target="_blank">GitHub release</a>. Unzip the folder and move it into the trajectoryGuide folder at the location `resources/ext_libs/space`.
+Download the template space files from this <a href="https://github.com/greydongilmore/trajectoryGuideModules/releases/download/space/space.zip" target="_blank">GitHub release</a>. Unzip the folder and move it into the trajectoryGuide folder at the location `resources/ext_libs/space`.
 
 ## 3D Slicer setup
 
