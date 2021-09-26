@@ -44,6 +44,12 @@ Download the template space files from this <a href="https://github.com/greydong
 3. Copy and paste the command below into the Python interactor box, press `Enter` to run the command.
 
     ```
+    pip_install('--upgrade pip')
+    ```
+
+4. Copy and paste the command below into the Python interactor box, press `Enter` to run the command.
+
+    ```
     pip_install('scikit-image pandas scipy shapely')
     ```
 
@@ -60,7 +66,7 @@ Download the template space files from this <a href="https://github.com/greydong
 
 2. In the settings dialog window select `Modules`, click the right-facing arrows next to the box with the text `Additional module paths` and click `Add`
 
-3. Navigate to where you stored the source code for trajectoryGuide, select the top (root) trajectoryGuide folder and click `Choose`
+3. Navigate to where you stored the source code for trajectoryGuide, select each of the sub-folders within the trajectoryGuideModules folder and click `Choose`
 
     <center>
         <figure>
@@ -68,6 +74,16 @@ Download the template space files from this <a href="https://github.com/greydong
             <figcaption>3D Slicer add module path.</figcaption>
         </figure>
     </center>
+
+    * dataImport
+    * frameDetect
+    * registration
+    * anatomicalLandmarks
+    * preopPlanning
+    * intraopPlanning
+    * postopProgramming
+    * postopLocalization
+    * dataView
 
 4. 3D Slicer will want to restart at this point, click `Yes`
 
