@@ -14,6 +14,7 @@ title: Product Manuals
 * <a href="static/alphaomega_neuroomega_research_manual_v1.1.4.2.pdf" target="_blank">Neuro Omega research v1.1</a>
 * <a href="static/alphaomega_neuroomega_sdk_manual_v1.3.pdf" target="_blank">Neuro Omega sdk v1.3</a>
 * <a href="static/alphaomega_alphalab_snr_manual_V2.0.4.1.pdf" target="_blank">Alpha Lab SnR manual v2.0.4.1</a>
+* <a href="static/alphaomega_medical_accessories_catalog_2016.pdf" target="_blank">Alpha Omega Medical Accessories Catalogue 2016</a>
 
 ### Medtronic - Leadpoint
 
