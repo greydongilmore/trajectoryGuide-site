@@ -30,44 +30,46 @@ title: Registration
 
 ### AC point
 
+
+![!The anterior commissure.](img/01_AC.png)
+
 <center>
     <figure>
-        <a href="img/01_AC.png" target="_blank">![](img/01_AC.png)</a>
         <figcaption>The anterior commissure.</figcaption>
     </figure>
 </center>
 
-
 ### PC point
+
+![!The posterior commissure.](img/02_PC.png)
 
 <center>
     <figure>
-        <a href="img/02_PC.png" target="_blank">![](img/02_PC.png)</a>
         <figcaption>The posterior commissure.</figcaption>
     </figure>
 </center>
-
 
 ### Midline Points
 
 #### Infracollicular Sulcus
 
+![!The infracollicular sulcus.](img/03_ICS.png)
+
 <center>
     <figure>
-        <a href="img/03_ICS.png" target="_blank">![](img/03_ICS.png)</a>
         <figcaption>The infracollicular sulcus.</figcaption>
     </figure>
 </center>
 
 #### Superior interpeduncular fossa
 
+![!The superior interpeduncular fossa.](img/05_SIPF.png)
+
 <center>
     <figure>
-        <a href="img/05_SIPF.png" target="_blank">![](img/05_SIPF.png)</a>
         <figcaption>The superior interpeduncular fossa.</figcaption>
     </figure>
 </center>
-
 
 <br>
 <br>

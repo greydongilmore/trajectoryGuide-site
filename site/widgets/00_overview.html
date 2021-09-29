@@ -13,7 +13,7 @@
         <meta name="author" content="Greydon Gilmore">
       
       <link rel="shortcut icon" href="../img/trajectoryGuide_icon.svg">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
     
     
       
@@ -22,8 +22,7 @@
     
     
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/bstreeview.min.css">
-    
+  
       <link rel="stylesheet" href="../assets/stylesheets/main.545621a7.min.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/palette.36d1b78f.min.css">
@@ -34,9 +33,11 @@
         <meta name="theme-color" content="#ef5350">
       
     
+  <link rel="stylesheet" href="../css/bstreeview.min.css">
+  <link rel="stylesheet" href="../css/lightgallery.min.css">
 
     
-    
+  
   <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -45,7 +46,8 @@
 <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/7e31cfd31d.js" crossorigin="anonymous"></script>
-    <script src="../js/bstreeview.min.js"></script>
+  <script src="../js/bstreeview.min.js"></script>
+  <script src="../js/lightgallery.min.js"></script>
 
     
       
@@ -88,7 +90,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="trajectoryGuide v1.0" class="md-header-nav__button md-logo" aria-label="trajectoryGuide v1.0">
+    <a href="../index.html" title="trajectoryGuide v1.0" class="md-header-nav__button md-logo" aria-label="trajectoryGuide v1.0">
       
   <img src="../img/trajectoryGuide.png" alt="logo">
 
@@ -174,7 +176,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="trajectoryGuide v1.0" class="md-nav__button md-logo" aria-label="trajectoryGuide v1.0">
+    <a href="../index.html" title="trajectoryGuide v1.0" class="md-nav__button md-logo" aria-label="trajectoryGuide v1.0">
       
   <img src="../img/trajectoryGuide.png" alt="logo">
 
@@ -447,6 +449,13 @@
           <li class="md-nav__item">
   <a href="#neurosight" class="md-nav__link">
     NeuroSight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claronav-navient" class="md-nav__link">
+    ClaroNav Navient
   </a>
   
 </li>
@@ -741,6 +750,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#claronav-navient" class="md-nav__link">
+    ClaroNav Navient
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -804,6 +820,8 @@
 <p>Developed by Mevis. More information can be found on their <a href="http://www.mevis.com.br/mnps-2.html" target="_blank">website</a>.</p>
 <h4 id="neurosight">NeuroSight<a class="headerlink" href="#neurosight" title="Permanent link">&para;</a></h4>
 <p>Developed by Integra. More information can be found on their <a href="https://integralife.eu/products/neuro/stereotaxy/neurosight-arc-software-laptop/" target="_blank">website</a>.</p>
+<h4 id="claronav-navient">ClaroNav Navient<a class="headerlink" href="#claronav-navient" title="Permanent link">&para;</a></h4>
+<p>Developed by ClaroNav. More information can be found on their <a href="https://www.claronav.com/navient/" target="_blank">website</a>.</p>
 <p><br>
 <br>
 <br></p>
@@ -924,6 +942,7 @@
 
     </div>
     
+    
       <script src="../assets/javascripts/vendor.de50e36d.min.js"></script>
       <script src="../assets/javascripts/bundle.dd72b84b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
@@ -946,5 +965,12 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
   </body>
 </html>

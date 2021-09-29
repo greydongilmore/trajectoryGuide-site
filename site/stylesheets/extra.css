@@ -63,14 +63,15 @@
 }
 
 .md-content {
-  text-align: justify;
+    text-align: justify;
 }
 
 .md-typeset {
-  line-height: 1.4em;
-  font-size: 18px;
+    line-height: 1.4em;
+    font-size: 18px;
 }
 
 .bstreeview .list-group-item {
-  font-size: 15px;
+    font-size: 15px;
 }
+

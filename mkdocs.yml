@@ -44,6 +44,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - lightgallery:
+      show_description_in_lightgallery: true
+      show_description_as_inline_caption: false
 
 extra_css:
   - stylesheets/extra.css
