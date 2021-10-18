@@ -13,7 +13,7 @@
         <meta name="author" content="Greydon Gilmore">
       
       <link rel="shortcut icon" href="img/trajectoryGuide_icon.svg">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.3.2">
     
     
       
@@ -60,6 +60,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#preoperative-features" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -189,9 +194,54 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="index.html" title="Home" class="md-nav__link md-nav__link--active">
       Home
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preoperative-features" class="md-nav__link">
+    Preoperative features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perioperative-features" class="md-nav__link">
+    Perioperative features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postoperative-features" class="md-nav__link">
+    Postoperative features
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -443,6 +493,50 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preoperative-features" class="md-nav__link">
+    Preoperative features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perioperative-features" class="md-nav__link">
+    Perioperative features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postoperative-features" class="md-nav__link">
+    Postoperative features
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -453,40 +547,29 @@
   <p><center><img src="img/trajectoryGuide.svg" alt="drawing" style="width:30%;"/></center></p>
 <p><center><em>An open-source software for neurosurgical trajectory planning, visualization, and postoperative assessment</em></center></p>
 <hr />
-<p align="center"><img src="img/main_interface.png" alt="drawing"/></p>
-<p><br></p>
+<p align="center" style="font-size:38px;">What is trajectoryGuide?</p>
+
 <p><strong>trajectoryGuide</strong> provides the capability to plan surgical trajectories within 3D Slicer, an open-source medical imaging software. trajectoryGuide contains modules that span the three phases of neurosurgical trajectory planning:</p>
-<ol>
-<li>
-<p><strong>Pre-operative</strong></p>
+<h2 id="preoperative-features">Preoperative features<a class="headerlink" href="#preoperative-features" title="Permanent link">&para;</a></h2>
 <ul>
-<li>automatic stereotactic frame detection (supported frames: Leksell, BRW)</li>
-<li>
-<p>co-registration of MRI scans with 3D volumetric stealth MRI</p>
-<p><p align="center"><img src="img/coregConfirmSlide.gif" alt="drawing" width="50%"/></p></p>
-</li>
-<li>
-<p>trajectory planning providing coordinates in anatomical and frame space (including arc, ring angles)</p>
-</li>
+<li>automatic stereotactic frame detection (supported frames: Leksell, BRW, and CRW)</li>
+<li>co-registration of MRI and CT scans (incorporated registration algorithms: ANTS, FSL, or NiftyReg)</li>
+<li>trajectory planning providing coordinates in anatomical and stereotactic space (including arc, ring angles)</li>
 </ul>
-</li>
-<li>
-<p><strong>Intra-operative</strong></p>
+<p><div class="lightgallery"><a data-sub-html="Preoperative planning." href="/img/preoperative_features_01.bmp"><img alt="Preoperative planning." src="/img/preoperative_features_01.bmp" /></a></div></p>
+<h2 id="perioperative-features">Perioperative features<a class="headerlink" href="#perioperative-features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>update final electrode position based on intra-operative testing</li>
 <li>display microelectrode recordings (MER) within the patients MRI space</li>
 </ul>
-</li>
-<li>
-<p><strong>Post-operative</strong></p>
+<p><div class="lightgallery"><a data-sub-html="Perioperative planning." href="/img/preoperative_features_02.bmp"><img alt="Perioperative planning." src="/img/preoperative_features_02.bmp" /></a></div></p>
+<h2 id="postoperative-features">Postoperative features<a class="headerlink" href="#postoperative-features" title="Permanent link">&para;</a></h2>
 <ul>
-<li>co-registration of post-op imaging (CT or MRI)</li>
-<li>visualization of implanted electrodes (planned, intra-op update, and post-op location)</li>
-<li>visualize stimulation settings as volume of tissues activated fields</li>
-<li>view data within a template space (default is MNI space)</li>
+<li>electrode localization (using post-op imaging)</li>
+<li>visualize stimulation settings as volume of activated tissue</li>
+<li>view data within a template space (provided spaces: MNI152NLin2009bAsym, MNI152NLin2009cAsym, and PD25)</li>
 </ul>
-</li>
-</ol>
+<p><div class="lightgallery"><a data-sub-html="Volume of activated tissue." href="/img/05_post_programming.png"><img alt="Volume of activated tissue." src="/img/05_post_programming.png" /></a></div></p>
 <p><br><br><br></p>
   
     
