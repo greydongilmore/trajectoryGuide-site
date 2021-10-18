@@ -8,29 +8,31 @@ template: overrides/main_noedit.html
 
 ---
 
-<p align="center"><img src="img/main_interface.png" alt="drawing"/></p><br>
+<p align="center" style="font-size:38px;">What is trajectoryGuide?</p>
 
 **trajectoryGuide** provides the capability to plan surgical trajectories within 3D Slicer, an open-source medical imaging software. trajectoryGuide contains modules that span the three phases of neurosurgical trajectory planning:
 
-1. **Pre-operative**
+## Preoperative features
    
-      - automatic stereotactic frame detection (supported frames: Leksell, BRW)
-      - co-registration of MRI scans with 3D volumetric stealth MRI
+* automatic stereotactic frame detection (supported frames: Leksell, BRW, and CRW)
+* co-registration of MRI and CT scans (incorporated registration algorithms: ANTS, FSL, or NiftyReg)
+* trajectory planning providing coordinates in anatomical and stereotactic space (including arc, ring angles)
       
-         <p align="center"><img src="img/coregConfirmSlide.gif" alt="drawing" width="50%"/></p>
-      
-      - trajectory planning providing coordinates in anatomical and frame space (including arc, ring angles)
+![!Preoperative planning.](/img/preoperative_features_01.bmp)
 
-2. **Intra-operative**
+## Perioperative features
 
-      - update final electrode position based on intra-operative testing
-      - display microelectrode recordings (MER) within the patients MRI space
+* update final electrode position based on intra-operative testing
+* display microelectrode recordings (MER) within the patients MRI space
 
-3. **Post-operative**
+![!Perioperative planning.](/img/preoperative_features_02.bmp)
 
-      - co-registration of post-op imaging (CT or MRI)
-      - visualization of implanted electrodes (planned, intra-op update, and post-op location)
-      - visualize stimulation settings as volume of tissues activated fields
-      - view data within a template space (default is MNI space)
+## Postoperative features
+
+* electrode localization (using post-op imaging)
+* visualize stimulation settings as volume of activated tissue
+* view data within a template space (provided spaces: MNI152NLin2009bAsym, MNI152NLin2009cAsym, and PD25)
+
+![!Volume of activated tissue.](/img/05_post_programming.png)
 
 <br><br><br>
