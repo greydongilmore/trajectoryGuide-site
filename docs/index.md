@@ -18,14 +18,14 @@ template: overrides/main_noedit.html
 * co-registration of MRI and CT scans (incorporated registration algorithms: ANTS, FSL, or NiftyReg)
 * trajectory planning providing coordinates in anatomical and stereotactic space (including arc, ring angles)
       
-![!Preoperative planning.](/img/preoperative_features_01.bmp)
+![!Preoperative planning.](img/preoperative_features_01.bmp)
 
 ## Perioperative features
 
 * update final electrode position based on intra-operative testing
 * display microelectrode recordings (MER) within the patients MRI space
 
-![!Perioperative planning.](/img/preoperative_features_02.bmp)
+![!Perioperative planning.](img/preoperative_features_02.bmp)
 
 ## Postoperative features
 
@@ -33,6 +33,6 @@ template: overrides/main_noedit.html
 * visualize stimulation settings as volume of activated tissue
 * view data within a template space (provided spaces: MNI152NLin2009bAsym, MNI152NLin2009cAsym, and PD25)
 
-![!Volume of activated tissue.](/img/05_post_programming.png)
+![!Volume of activated tissue.](img/05_post_programming.png)
 
 <br><br><br>
