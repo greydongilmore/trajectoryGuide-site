@@ -50,7 +50,7 @@ Download the template space files from this <a href="https://github.com/greydong
 4. Copy and paste the command below into the Python interactor box, press `Enter` to run the command.
 
     ```
-    pip_install('scikit-image pandas scipy==1.5.4')
+    pip_install('scikit-image scikit-learn pandas scipy==1.5.4')
     ```
 
 ### Add trajectoryGuide module
