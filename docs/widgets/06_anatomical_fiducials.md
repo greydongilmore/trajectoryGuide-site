@@ -51,6 +51,16 @@ title: Registration
 
 ### Midline Points
 
+#### Genu
+
+![!Genu.](img/19_Genu.png)
+
+<center>
+    <figure>
+        <figcaption>Genu.</figcaption>
+    </figure>
+</center>
+
 #### Infracollicular Sulcus
 
 ![!The infracollicular sulcus.](img/03_ICS.png)
