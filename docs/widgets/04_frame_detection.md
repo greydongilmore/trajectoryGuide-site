@@ -24,7 +24,7 @@ If the automatic detection was successful you will see an image like this:
 
 <center>
     <figure>
-        <img src="img/detected_fiducials.png" alt="frame_fiducials"/>
+        <img src="img/04_frame_detection/frame_detect.gif" alt="frame_fiducials"/>
         <figcaption>Frame fiducials with frame registration errors.</figcaption>
     </figure>
 </center>
