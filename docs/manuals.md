@@ -103,7 +103,7 @@ title: Product Manuals
 
 ### St Jude
 
-* <a href="static/stjude_lead_manual_2017.pdf" target="_blank">Product manual 2017 2019</a>
+* <a href="static/stjude_lead_manual_2017.pdf" target="_blank">Product manual 2017</a>
 
 <br>
 <br>
