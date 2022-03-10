@@ -86,6 +86,20 @@ title: Product Manuals
 * <a href="static/lhsc_dbs_mri_protocol_pre_2018.pdf" target="_blank">2018 LHSC pre-op MRI sequences - DBS</a>
 * <a href="static/lhsc_dbs_mri_protocol_post.pdf" target="_blank">2018 LHSC post-op MRI sequences - DBS</a>
 
+## Other Electrodes
+
+### ALCIS Neuro
+
+* <a href="static/alcis_neuro_product_catalog_2021.pdf" target="_blank">Product catalog 2021</a>
+
+### Neuropace
+
+* <a href="static/neuropace_rns_manual_2019.pdf" target="_blank">Product catalog 2019</a>
+
+### PMT
+
+* <a href="static/pmt_product_catalog_2015.pdf" target="_blank">Product catalog 2015</a>
+* <a href="static/pmt_seeg_catalog_2014.pdf" target="_blank">sEEG product catalog 2014</a>
 
 <br>
 <br>
