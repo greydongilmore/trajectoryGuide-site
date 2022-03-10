@@ -101,6 +101,10 @@ title: Product Manuals
 * <a href="static/pmt_product_catalog_2015.pdf" target="_blank">Product catalog 2015</a>
 * <a href="static/pmt_seeg_catalog_2014.pdf" target="_blank">sEEG product catalog 2014</a>
 
+### St Jude
+
+* <a href="static/stjude_lead_manual_2017.pdf" target="_blank">Product manual 2017 2019</a>
+
 <br>
 <br>
 <br>
