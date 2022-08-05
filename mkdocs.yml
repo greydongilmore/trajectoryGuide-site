@@ -69,7 +69,7 @@ nav:
     - Saving Data: 3dslicer/02_saving_data.md
   - Modules:
     - Overview: widgets/00_overview.md
-    - Patient Directory: widgets/01_patient_directory.md
+    - Data Import: widgets/01_data_import.md
     - Frame Detection: widgets/04_frame_detection.md
     - Registration: widgets/05_registration.md
     - Anatomical Fiducials: widgets/06_anatomical_fiducials.md
