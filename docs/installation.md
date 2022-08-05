@@ -13,11 +13,11 @@ Install 3D Slicer **Version 4.11.0 (or later)** by downloading it from the <a hr
 
 ### trajectoryGuide source code
 
-Download the **trajectoryGuide** source code from <a href="https://github.com/greydongilmore/trajectoryGuide" target="_blank">GitHub</a>. Unzip the folder and store it somewhere on your system.
+Download the **trajectoryGuide** source code from <a href="https://github.com/greydongilmore/trajectoryGuideModules" target="_blank">GitHub</a>. Unzip the folder and store it somewhere on your system.
 
 ### Template space directory
 
-Download the template space files from this <a href="https://github.com/greydongilmore/trajectoryGuideModules/releases/download/space/space.zip" target="_blank">GitHub release</a>. Unzip the folder and move it into the trajectoryGuide folder at the location `resources/ext_libs/space`.
+Download the template space zip file from the most recent <a href="https://github.com/greydongilmore/trajectoryGuideModules/releases" target="_blank">GitHub release</a>. Unzip the folder and move it into the trajectoryGuide folder at the location `resources/ext_libs/space`.
 
 ## 3D Slicer setup
 
@@ -53,7 +53,19 @@ Download the template space files from this <a href="https://github.com/greydong
     pip_install('scikit-image scikit-learn pandas scipy==1.5.4')
     ```
 
-### Add trajectoryGuide module
+### Add trajectoryGuide modules
+
+!!! note
+    You will only need to add the following modules: <br>
+    &emsp;&emsp;&#9745; dataImport <br>
+    &emsp;&emsp;&#9745; frameDetect <br>
+    &emsp;&emsp;&#9745; registration <br>
+    &emsp;&emsp;&#9745; anatomicalLandmarks <br>
+    &emsp;&emsp;&#9745; preopPlanning <br>
+    &emsp;&emsp;&#9745; intraopPlanning <br>
+    &emsp;&emsp;&#9745; postopProgramming <br>
+    &emsp;&emsp;&#9745; postopLocalization <br>
+    &emsp;&emsp;&#9745; dataView <br>
 
 1. In the top menu, click on the `Edit` menu and select `Application settings`
 
@@ -66,7 +78,7 @@ Download the template space files from this <a href="https://github.com/greydong
 
 2. In the settings dialog window select `Modules`, click the right-facing arrows next to the box with the text `Additional module paths` and click `Add`
 
-3. Navigate to where you stored the source code for trajectoryGuide, select each of the sub-folders within the trajectoryGuideModules folder and click `Choose`
+3. Navigate to where you stored the source code for trajectoryGuide, select each of the sub-folders listed in the *Note* box above and click `Choose`. You will need to add each folder one-by-one.
 
     <center>
         <figure>
@@ -74,16 +86,6 @@ Download the template space files from this <a href="https://github.com/greydong
             <figcaption>3D Slicer add module path.</figcaption>
         </figure>
     </center>
-
-    * dataImport
-    * frameDetect
-    * registration
-    * anatomicalLandmarks
-    * preopPlanning
-    * intraopPlanning
-    * postopProgramming
-    * postopLocalization
-    * dataView
 
 4. 3D Slicer will want to restart at this point, click `Yes`
 
