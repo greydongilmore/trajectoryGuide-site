@@ -17,7 +17,7 @@ Download the **trajectoryGuide** source code from <a href="https://github.com/gr
 
 ### Template space directory
 
-Download the template space zip file from the most recent <a href="https://github.com/greydongilmore/trajectoryGuideModules/releases" target="_blank">GitHub release</a>. Unzip the folder and move it into the trajectoryGuide folder at the location `resources/ext_libs/space`.
+Download the template space zip file from the most recent <a href="https://github.com/greydongilmore/trajectoryGuideModules/releases" target="_blank">GitHub release</a>. Unzip the folder and move it into the trajectoryGuide folder at the location `resources/ext_libs/space`. h
 
 ## 3D Slicer setup
 
@@ -52,6 +52,11 @@ Download the template space zip file from the most recent <a href="https://githu
     ```
     pip_install('scikit-image scikit-learn pandas scipy==1.5.4')
     ```
+
+### Install modules
+
+&emsp;&emsp;**trajectoryGuide** uses the **Volume Reslice Driver** module from <a href="http://www.slicerigt.org/wp/" target="_blank">**SlicerIGT**</a>. To install this use the **Extension Manager** module within 3D Slicer or download the source code for your slicer version <a href="https://slicer-packages.kitware.com/#collection/5f4474d0e1d8c75dfc70547e/folder/5f4474d0e1d8c75dfc705482" target="_blank">here</a> (select Slicer version --> extensions --> SlicerIGT).
+
 
 ### Add trajectoryGuide modules
 

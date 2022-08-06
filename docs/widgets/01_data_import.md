@@ -17,6 +17,7 @@ title: Data Import
 &emsp;&emsp;**trajectoryGuide** requires the input data folder to be organized according to <a href="https://bids.neuroimaging.io/" target="_blank">Brain Imaging Data Structure (BIDS)</a>. The following is an example input directory.
 
 ```
+
 bids/
     ├── dataset_description.json
     └── sub-<subject_label>/
@@ -27,6 +28,7 @@ bids/
             │   └── sub-<subject_label>_ses-<ses_label>_acq-Tra_T2w.nii.gz
             └── ct/
                 └── sub-<subject_label>_ses-<ses_label>_acq-Frame_ct.nii.gz
+
 ```
 
 ### Output directory structure
@@ -34,6 +36,7 @@ bids/
 &emsp;&emsp;**trajectoryGuide** trajectoryGuide stores processed data within the derivatives directoy of the BIDS dataset.
 
 ```java
+
 bids/
     ├── dataset_description.json
     └── sub-<subject_label>/...
@@ -54,6 +57,7 @@ derivatives/
                 ├── source/...
                 ├── space/...
                 └── summaries/...
+
 ```
 
 &emsp;&emsp;Each image volume has an associated `.json` file that stores metadata associated with the volume as it progresses through the **trajectoryGuide** workflow. Select the import options prior to loading the patient directory.
@@ -61,13 +65,13 @@ derivatives/
 <center>
     <figure>
         <img src="img/patient_directory_wig.png" alt="patient_directory_wig"/>
-        <figcaption>Patient directory module in trajectoryGuide.</figcaption>
+        <figcaption>Data import module in trajectoryGuide.</figcaption>
     </figure>
 </center>
 
-* **Implanted Sides:** indicate if the trajectory plan will be unilateral or bilateral
 * **Rename Scans:** trajectoryGuide will rename the imaging data to comply with BIDS format, the imaging filenames will be shortened
-* **Use Previously Values:** this option is recommended. If the patient directory has already been loaded by trajectoryGuide, then the previous data values will be re-loaded
+* **Use Previous Values:** this option is recommended. If the patient directory has already been loaded by trajectoryGuide, then the previous data values will be re-loaded
+* **BIDSify data:** future feature to convert DICOM data to BIDS.
 
 <br>
 <br>

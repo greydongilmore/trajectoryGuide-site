@@ -18,14 +18,14 @@ template: overrides/main_noedit.html
 * co-registration of MRI and CT scans (incorporated registration algorithms: ANTS, FSL, or NiftyReg)
 * trajectory planning providing coordinates in anatomical and stereotactic space (including arc, ring angles)
       
-![!Preoperative planning.](img/preoperative_features_01.bmp)
+![!Preoperative planning.](img/preoperative_features_01.png)
 
 ## Perioperative features
 
 * update final electrode position based on intra-operative testing
 * display microelectrode recordings (MER) within the patients MRI space
 
-![!Perioperative planning.](img/preoperative_features_02.bmp)
+![!Perioperative planning.](img/preoperative_features_02.png)
 
 ## Postoperative features
 
