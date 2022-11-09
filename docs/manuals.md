@@ -25,6 +25,8 @@ title: Product Manuals
 
 ### Medtronic
 
+* <a href="static/medtronic_sensight_B33005_B33015_manual_2021.pdf" target="_blank">SenSight lead B33005/B33015 implant manual 2021</a>
+* <a href="static/medtronic_sensight_orientation_card_2021.pdf" target="_blank">SenSight lead orientation card 2021</a>
 * <a href="static/medtronic_activa_programming_manual_2020.pdf" target="_blank">Activa programming manual 2020</a>
 * <a href="static/medtronic_activa_pc_implant_manual_2019.pdf" target="_blank">Activa PC implant manual 2019</a>
 * <a href="static/medtronic_activa_pc_implant_manual_2010.pdf" target="_blank">Activa PC implant manual 2010</a>
