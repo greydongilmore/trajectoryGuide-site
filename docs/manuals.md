@@ -84,9 +84,15 @@ title: Product Manuals
 
 ## MRI
 
-* <a href="static/lhsc_dbs_mri_protocol_pre_2021.pdf" target="_blank">2021 LHSC pre-op MRI sequences - DBS</a>
-* <a href="static/lhsc_dbs_mri_protocol_pre_2018.pdf" target="_blank">2018 LHSC pre-op MRI sequences - DBS</a>
-* <a href="static/lhsc_dbs_mri_protocol_post.pdf" target="_blank">2018 LHSC post-op MRI sequences - DBS</a>
+### Clinical
+
+* <a href="static/lhsc_dbs_mri_protocol_pre_2021.pdf" target="_blank">2021 LHSC pre-op 1.5T MRI sequences - DBS</a>
+* <a href="static/lhsc_dbs_mri_protocol_pre_2018.pdf" target="_blank">2018 LHSC pre-op 1.5T MRI sequences - DBS</a>
+* <a href="static/lhsc_dbs_mri_protocol_post.pdf" target="_blank">2018 LHSC post-op 1.5T MRI sequences - DBS</a>
+
+### Research
+
+* <a href="static/cfmm_dbs_3Tmri_protocol_pre_2023.pdf" target="_blank">2023 CFMM pre-op 3T MRI sequences - DBS</a>
 
 ## Other Electrodes
 
