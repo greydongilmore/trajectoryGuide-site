@@ -85,14 +85,14 @@ title: Product Manuals
 ## MRI
 
 ### Clinical
+* <a href="static/lhsc_dbs_mri_protocol_pre_2021.pdf" target="_blank">2021 LHSC DBS pre-op - GE 1.5T</a>
+* <a href="static/lhsc_dbs_mri_protocol_pre_2018.pdf" target="_blank">2018 LHSC DBS pre-op - GE 1.5T</a>
+* <a href="static/lhsc_dbs_mri_protocol_post.pdf" target="_blank">2018 LHSC DBS post-op - GE 1.5T</a>
 
-* <a href="static/lhsc_dbs_mri_protocol_pre_2021.pdf" target="_blank">2021 LHSC pre-op 1.5T MRI sequences - DBS</a>
-* <a href="static/lhsc_dbs_mri_protocol_pre_2018.pdf" target="_blank">2018 LHSC pre-op 1.5T MRI sequences - DBS</a>
-* <a href="static/lhsc_dbs_mri_protocol_post.pdf" target="_blank">2018 LHSC post-op 1.5T MRI sequences - DBS</a>
-
-### Research
-
-* <a href="static/cfmm_dbs_3Tmri_protocol_pre_2023.pdf" target="_blank">2023 CFMM pre-op 3T MRI sequences - DBS</a>
+### CFMM Research
+* <a href="static/cfmm_preop_DBS_7tsiemens_2024.pdf" target="_blank">2024 CFMM DBS pre-op - Siemens 7T</a>
+* <a href="static/cfmm_dbs_3Tmri_protocol_pre_2023.pdf" target="_blank">CFMM DBS pre-op - Siemens 3T</a>
+* <a href="static/cfmm_tle_7tsiemens_2021.pdf" target="_blank">2021 CFMM Epilepsy pre-op - Siemens 7T</a>
 
 ## Other Electrodes
 
