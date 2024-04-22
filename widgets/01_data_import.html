@@ -13,7 +13,7 @@
         <meta name="author" content="Greydon Gilmore">
       
       <link rel="shortcut icon" href="../img/trajectoryGuide_icon.svg">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-5.3.2">
     
     
       
@@ -112,36 +112,6 @@
         </div>
       
     </div>
-    
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-      </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
       <div class="md-header-nav__source">
@@ -595,40 +565,40 @@
 <h2 id="data-directory">Data directory<a class="headerlink" href="#data-directory" title="Permanent link">&para;</a></h2>
 <h3 id="input-directory-structure">Input directory structure<a class="headerlink" href="#input-directory-structure" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;<strong>trajectoryGuide</strong> requires the input data folder to be organized according to <a href="https://bids.neuroimaging.io/" target="_blank">Brain Imaging Data Structure (BIDS)</a>. The following is an example input directory.</p>
-<div class="highlight"><pre><span></span><code>bids/
-    ├── dataset_description.json
-    └── sub-&lt;subject_label&gt;/
-        └── ses-&lt;ses_label&gt;/
-            ├── anat/
-            │   ├── sub-&lt;subject_label&gt;_ses-&lt;ses_label&gt;_T1w.nii.gz
-            │   ├── sub-&lt;subject_label&gt;_ses-&lt;ses_label&gt;_PD.nii.gz
-            │   └── sub-&lt;subject_label&gt;_ses-&lt;ses_label&gt;_acq-Tra_T2w.nii.gz
-            └── ct/
-                └── sub-&lt;subject_label&gt;_ses-&lt;ses_label&gt;_acq-Frame_ct.nii.gz
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bids/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ├── dataset_description.json
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    └── sub-&lt;subject_label&gt;/
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        └── ses-&lt;ses_label&gt;/
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            ├── anat/
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            │   ├── sub-&lt;subject_label&gt;_ses-&lt;ses_label&gt;_T1w.nii.gz
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            │   ├── sub-&lt;subject_label&gt;_ses-&lt;ses_label&gt;_PD.nii.gz
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            │   └── sub-&lt;subject_label&gt;_ses-&lt;ses_label&gt;_acq-Tra_T2w.nii.gz
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            └── ct/
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                └── sub-&lt;subject_label&gt;_ses-&lt;ses_label&gt;_acq-Frame_ct.nii.gz
+</span></code></pre></div>
 <h3 id="output-directory-structure">Output directory structure<a class="headerlink" href="#output-directory-structure" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;<strong>trajectoryGuide</strong> trajectoryGuide stores processed data within the derivatives directoy of the BIDS dataset.</p>
-<div class="highlight"><pre><span></span><code><span class="n">bids</span><span class="o">/</span>
-<span class="w">    </span><span class="err">├──</span><span class="w"> </span><span class="n">dataset_description</span><span class="p">.</span><span class="na">json</span>
-<span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;/</span><span class="p">...</span>
-<span class="n">derivatives</span><span class="o">/</span>
-<span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="n">trajectoryGuide</span><span class="o">/</span>
-<span class="w">        </span><span class="err">└──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;/</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_surgical_data</span><span class="p">.</span><span class="na">json</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_T1w</span><span class="p">.</span><span class="na">nii</span><span class="p">.</span><span class="na">gz</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_T1w</span><span class="p">.</span><span class="na">json</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_space</span><span class="o">-</span><span class="n">T1w_acq</span><span class="o">-</span><span class="n">Tra_T2w</span><span class="p">.</span><span class="na">nii</span><span class="p">.</span><span class="na">gz</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_space</span><span class="o">-</span><span class="n">T1w_acq</span><span class="o">-</span><span class="n">Tra_T2w</span><span class="p">.</span><span class="na">json</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_desc</span><span class="o">-</span><span class="n">rigid_from</span><span class="o">-</span><span class="n">TraT2w_to</span><span class="o">-</span><span class="n">T1w_xfm</span><span class="p">.</span><span class="na">h5</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_space</span><span class="o">-</span><span class="n">T1w_PD</span><span class="p">.</span><span class="na">nii</span><span class="p">.</span><span class="na">gz</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_space</span><span class="o">-</span><span class="n">T1w_PD</span><span class="p">.</span><span class="na">json</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_desc</span><span class="o">-</span><span class="n">rigid_from</span><span class="o">-</span><span class="n">PD_to</span><span class="o">-</span><span class="n">T1w_xfm</span><span class="p">.</span><span class="na">h5</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_ses</span><span class="o">-</span><span class="n">pre_coordsystem</span><span class="p">.</span><span class="na">json</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">settings</span><span class="o">/</span><span class="p">...</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">source</span><span class="o">/</span><span class="p">...</span>
-<span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">space</span><span class="o">/</span><span class="p">...</span>
-<span class="w">                </span><span class="err">└──</span><span class="w"> </span><span class="n">summaries</span><span class="o">/</span><span class="p">...</span>
-</code></pre></div>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">bids</span><span class="o">/</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="err">├──</span><span class="w"> </span><span class="n">dataset_description</span><span class="p">.</span><span class="na">json</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;/</span><span class="p">...</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">derivatives</span><span class="o">/</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="n">trajectoryGuide</span><span class="o">/</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="err">└──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;/</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_surgical_data</span><span class="p">.</span><span class="na">json</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_T1w</span><span class="p">.</span><span class="na">nii</span><span class="p">.</span><span class="na">gz</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_T1w</span><span class="p">.</span><span class="na">json</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_space</span><span class="o">-</span><span class="n">T1w_acq</span><span class="o">-</span><span class="n">Tra_T2w</span><span class="p">.</span><span class="na">nii</span><span class="p">.</span><span class="na">gz</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_space</span><span class="o">-</span><span class="n">T1w_acq</span><span class="o">-</span><span class="n">Tra_T2w</span><span class="p">.</span><span class="na">json</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_desc</span><span class="o">-</span><span class="n">rigid_from</span><span class="o">-</span><span class="n">TraT2w_to</span><span class="o">-</span><span class="n">T1w_xfm</span><span class="p">.</span><span class="na">h5</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_space</span><span class="o">-</span><span class="n">T1w_PD</span><span class="p">.</span><span class="na">nii</span><span class="p">.</span><span class="na">gz</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_space</span><span class="o">-</span><span class="n">T1w_PD</span><span class="p">.</span><span class="na">json</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_desc</span><span class="o">-</span><span class="n">rigid_from</span><span class="o">-</span><span class="n">PD_to</span><span class="o">-</span><span class="n">T1w_xfm</span><span class="p">.</span><span class="na">h5</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subject_label</span><span class="o">&gt;</span><span class="n">_ses</span><span class="o">-</span><span class="n">pre_coordsystem</span><span class="p">.</span><span class="na">json</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">settings</span><span class="o">/</span><span class="p">...</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">source</span><span class="o">/</span><span class="p">...</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                </span><span class="err">├──</span><span class="w"> </span><span class="n">space</span><span class="o">/</span><span class="p">...</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">                </span><span class="err">└──</span><span class="w"> </span><span class="n">summaries</span><span class="o">/</span><span class="p">...</span>
+</span></code></pre></div>
 <p>&emsp;&emsp;Each image volume has an associated <code>.json</code> file that stores metadata associated with the volume as it progresses through the <strong>trajectoryGuide</strong> workflow. Select the import options prior to loading the patient directory.</p>
 <p><center>
     <figure>
