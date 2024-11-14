@@ -100,9 +100,10 @@ title: Product Manuals
 
 * <a href="static/alcis_neuro_product_catalog_2021.pdf" target="_blank">Product catalog 2021</a>
 
-### Neuropace
+### NeuroPace
 
 * <a href="static/neuropace_rns_manual_2019.pdf" target="_blank">Product catalog 2019</a>
+* <a href="https://neuropace.showpad.com/share/fDBvwz7iPhzcSfgEv1qFX/0" target="_blank">Electrode Dimensions</a>
 
 ### PMT
 
