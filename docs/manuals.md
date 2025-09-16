@@ -20,8 +20,11 @@ title: Product Manuals
 
 * <a href="static/medtronic_leadpoint_manual_2001.pdf" target="_blank">Leapoint Clinical and Technical manual 2001</a>
 * <a href="static/medtronic_leadpoint_user_guide_2003.pdf" target="_blank">Leapoint User Guide 2003</a>
+* <a href="static/medtronic_leadpoint_channels_amplifier_box_2003.pdf" target="_blank">Leapoint Channels Amplifier Box 2003</a>
 * <a href="static/medtronic_leadpoint_microtargeting_drive_2004.pdf" target="_blank">MicroTargeting Drive User Guide 2004</a>
 * <a href="static/medtronic_leadpoint_microtargeting_accessories_2004.pdf" target="_blank">MicroTargeting Accessories 2004</a>
+* <a href="static/medtronic_leadpoint_microtargeting_adaptations_2003.pdf" target="_blank">MicroTargeting Adaptations 2003</a>
+
 
 ## Neuromodulation Devices
 
